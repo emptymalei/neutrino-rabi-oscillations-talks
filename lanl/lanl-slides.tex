@@ -38,7 +38,7 @@
 ]{textpos}
 
 %%%%% eso-pic package that set up a grid system for the slides BEGIN
-%\usepackage[texcoord,grid,gridcolor=red!10,subgridcolor=green!10,gridunit=pt]{eso-pic}
+\usepackage[texcoord,grid,gridcolor=red!10,subgridcolor=green!10,gridunit=pt]{eso-pic}
 % grid,gridcolor=red!20,subgridcolor=green!20,gridunit=pt
 %%%%% eso-pic package that set up a grid system for the slides END
 
@@ -1313,6 +1313,21 @@ where
 \end{frame}
 
 
+
+
+\begin{frame}{Rabi Oscillations}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/rabi-resonance.png}
+    \caption*{Amplitude of Rabi oscillations for different driving field frequency $k$}
+\end{figure}
+
+
+
+\end{frame}
+
 \begin{frame}{Visualizing Rabi Oscillations}
 
 \begin{textblock*}{10pt}(250pt,1pt)
@@ -1623,7 +1638,7 @@ We have been making approximations.
     \to& -\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \cos(kx)\sigma_1 
 \end{align*}
 
-A better basis
+We need a better basis.
 
 
 
@@ -1637,11 +1652,6 @@ A better basis
 
 \begin{frame}{Rabi Basis}
 
-
-Matter profile
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
-\end{equation*}
 
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
@@ -1676,14 +1686,6 @@ where
 
 \end{tcolorbox}
 
-% \begin{tcolorbox}[title=Transition Probability in Background Basis]
-
-% \begin{equation*}
-%     P_{1 \to 2} (x) = \left\lvert e^{i\eta} \psi_{p2} (x) \right \rvert^2 = \left\lvert \psi_{p2} (x)  \right\rvert^2 .
-% \end{equation*}
-
-% \end{tcolorbox}
-
 
 
 \end{frame}
@@ -1698,6 +1700,12 @@ where
 
 
 \begin{frame}{Single Frequency Matter Profile}
+
+
+Matter profile
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
+\end{equation*}
 
 
 Hamiltonian in new basis
@@ -1729,28 +1737,6 @@ Hamiltonian in new basis
 
 
 
-\begin{frame}{Rabi Oscillations}
-
-\only<1>{
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/rabi-oscillations.png}
-    \caption*{}
-\end{figure}
-
-}
-
-\only<2->{
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/rabi-resonance.png}
-    \caption*{Resonance}
-\end{figure}
-}
-
-
-\end{frame}
-
 
 
 
@@ -1765,7 +1751,7 @@ Hamiltonian in new basis
 \begin{tcolorbox}[title=Off-diagonal Term in Our System]
 
 \begin{equation*}
-    \mathbf{\widetilde H}= \begin{pmatrix}
+    \mathbf{\widetilde H}= - \frac{\omega_{\mathrm m}}{2}\sigma_3 + \begin{pmatrix}
     0 & h \\
     h^* & 0
     \end{pmatrix}
@@ -1876,6 +1862,11 @@ where
 
 \end{tcolorbox}
 
+Resonance conditions
+
+\begin{equation*}
+    \hat k \sim \frac{1}{n}
+\end{equation*}
 
 \end{frame}
 
@@ -1885,40 +1876,30 @@ where
 
 
 
-% \only<1-1>{
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=0.9\textwidth]{assets/stimulated-single-frequency-width-nk-orders.png}
-% \caption*{Width of the resonances for $A=0.1$, $\theta_{\mathrm{m}} = \pi/5$. Each width is a parameter of $n \hat k$.}
-% \end{figure}
-
-% }
-
-
-%\only<2-2>{
+\only<1->{
 
 \begin{figure}
 \centering
 \includegraphics[width=0.95\textwidth]{assets/stimulated-single-frequency-resonances-k-orders.png}
-\caption*{Resonances of different $n = 1/\hat k$.}
+\caption*{Resonances of different $n = 1/\hat k$. Width becomes extremely narrow for high orders.}
 \end{figure}
 
-%}
+}
+
+\only<2->{
+\begin{textblock*}{300pt}(40pt,100pt)
+\begin{tcolorbox}
+Condition for interference to be important from high orders: width should be larger than a critical value.
+\end{tcolorbox}
+\end{textblock*}
+}
+
+
+
 
 
 \end{frame}
 
-
-\begin{frame}{Single Frequency Matter Profile}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/stimulated-oscillation-rwa-and-numerical.png}
-    \caption*{$\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
-\end{figure}
-
-\end{frame}
 
 
 
@@ -1927,33 +1908,97 @@ where
 
 % \begin{frame}{Single Frequency Matter Profile}
 
-
-% \begin{tcolorbox}[title=PLACEHOLDER]
-% \color{red}
-% NEED A GRAPH TO EXPLAIN WHY FOR A SPECIFIC n WE ONLY TAKE THE ONE THAT IS MOST CLOSE TO RESONANCE!!!
-
-% \end{tcolorbox}
-
-
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{assets/stimulated-oscillation-rwa-and-numerical.png}
+%     \caption*{$\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
+% \end{figure}
 
 % \end{frame}
 
-\subsection{Two-frequency Matter Profile}
-
-\begin{frame}{Two-frequency Matter Profile}
 
 
+\begin{frame}{Single Frequency Matter Profile Revisited}
+
+\only<1>{
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{assets/2-freq-numerical-and-first-5-rwa.png}
-    \caption*{$\lambda(x) = \lambda_0 + A_1\sin(k_1 x) + A_2\sin(k_2 x)$. $\hat k_1=0.3$, $\hat k_2=0.7$, $A_1=A_2=0.1$, $\theta_m=\pi/5$.}
+    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-1}
+    
 \end{figure}
+}
+
+\only<2>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-2}
+    
+\end{figure}
+}
+
+\only<3>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-3}
+    
+\end{figure}
+}
 
 
 \end{frame}
 
 
 
+
+\begin{frame}{Castle Wall Matter Profile}
+
+
+
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+
+\only<1>{
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{assets/castlewall-profile}
+    \caption{Castle wall matter profile}
+\end{figure}
+}
+
+
+\only<2>{
+
+\begin{table}
+\caption{Relative detuning of each frequency.} 
+\begin{tabular}{lll} 
+ $\{n_1,n_2\}$ &  $D$ & $D'_{\{1,0\}}$   \\
+\hline \\
+ $\{1,0\}$ & $0$ &  - \\ 
+ $\{-1,0\}$ & $48$ &  $1.0\times 10^{-2}$ \\ 
+ $\{0,1\}$ & $1.5\times 10^2$ &  $1.1\times 10^{-3}$  \\
+ $\{2,0\}$ & $2.4\times 10^{2}$ & $2.0\times 10^{-4}$
+\end{tabular} 
+\end{table}
+
+}
+\end{column}%
+\begin{column}{0.5\textwidth}
+
+\begin{figure}
+        \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
+    % \caption{Transition probilities}
+\end{figure}
+
+
+\end{column}
+\end{columns}
+
+
+
+
+\end{frame}
 
 
 
@@ -1965,10 +2010,9 @@ where
 % In reality, a matter profile can be decomposed into many Fourier modes. If we can find a way to determine which terms are important, it would be very useful for more complicated calculations such as the combination of COLLECTIVE neutrino oscillations and matter effect.
 % Rather easy to numerically solve such systems. However, it is also good to learn the physics behind numerical calculation. Look into the most important term.
 
-\section{Summary \& Future Work}
+\section{Summary}
 
-\begin{frame}{Summary \& Future Work}
-
+\begin{frame}{Summary}
 
 
 \begin{itemize}\color{ao}
@@ -1980,16 +2024,12 @@ MSW resonance happens when matter potential cancels out the vacuum diagonal elem
 Even matter profile doesn't match MSW requirement, variation in matter profile can cause resonances.
 \item
 Single frequency perturbations in matter profile is a combination of many Rabi oscillations.
+\item
+Rabi oscillations with two driving fields of different frequencies: large width to destroy the resonance.
 \end{itemize}
 
 
 
-\begin{itemize}\color{red}
- \item 
- How to understand and calculate systems with multi-frequency matter profile (turbulence).
- \item
- Combine periodic or even turbulent matter profile with neutrino self-interaction.
-\end{itemize}
 
 
 
@@ -1998,13 +2038,13 @@ Single frequency perturbations in matter profile is a combination of many Rabi o
 
 
 
-\begin{frame}{Acknowledgement}
+% \begin{frame}{Acknowledgement}
 
-I am very thankful to my advisor Professor Huaiyu Duan, and everyone in our group Dr. Sajad Abbar, and Dr. Shashank Shalgar, for all the help in both research and life.
+% I am very thankful to my advisor Professor Huaiyu Duan, and everyone in our group Dr. Sajad Abbar, and Dr. Shashank Shalgar, for all the help in both research and life.
 
-Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
+% Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
 
-\end{frame}
+% \end{frame}
 
 
 
