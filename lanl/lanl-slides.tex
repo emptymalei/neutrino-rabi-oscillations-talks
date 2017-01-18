@@ -1184,35 +1184,12 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 
 
 
-\section{Understanding Stimulated Oscillations}
 
 
-
-% \begin{frame}{Supernova Matter Density Profile}
-
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{assets/supernova-matter-density-profile-power-spectra.png}
-%     \caption*{Supernova matter density power spectra from two simulations. E. Borriello, et al (2014)}
-% \end{figure}
+\section{Stimulated Neutrino Flavor Transitions}
 
 
-% \begin{align*}
-% P &= 4 \lvert c_n \rvert^2 \\
-% \Delta \rho(r) &= \sum_n c_n e^{i k_n r}    
-% \end{align*}
-    
-
-
-
-
-% \end{frame}
-
-
-
-
-\subsection{Hamiltonian, and Basis, and Rabi Oscillations}
+\subsection{Hamiltonian and Basis}
 
 
 
@@ -1253,6 +1230,7 @@ Matter profile
 
 
 
+\subsection{Rabi Oscillations}
 
 \begin{frame}{Rabi Oscillations}
 \setbeamercovered{invisible}
@@ -1387,7 +1365,7 @@ $} \\
     D = \left\vert\frac{\omega_0 - k}{\alpha} \right\vert
 \end{equation*}
 
-is 
+is ratio of the energy gap in corotating frame to width of resonance.
 
 \end{frame}
 
@@ -1495,24 +1473,133 @@ Corotating frame of the second frequency,
     \end{pmatrix}$}
 \end{equation*}
 
+\only<1>{
+Energy gap in this frame becomes the length of the vector
+
+\begin{equation*}
+    \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+}
+
+\only<2>{
+Energy gap in this frame becomes the length of the vector
+\begin{equation*}
+\sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
+\end{equation*}
+
+Relative detuning
+
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+
+}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Interferences of Rabi Oscillations}
+
+
+
+\begin{textblock*}{10pt}(220pt,16pt)
+\small
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+\end{textblock*}
+
+
+\vspace{2em}
+
+Two driving frequencies $k_1$, and $k_2$, with amplitude $\alpha_1$, and $\alpha_2$
+
+Destruction effect: $k_1 = \omega_{\mathrm m}$, $\lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}$
+
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth,trim={0 0.1cm 0 0.5cm},clip]{assets/rabi-osc-interferenes}
+\end{figure}
 
 
 
 \end{frame}
 
 
+\begin{frame}{Interferences of Rabi Oscillations}
+
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
+\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
+}
+\end{figure}
+
+% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
+
+{\tiny
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
+    \hline
+       Dashed  &  dotted & dash-dotted & solid \\
+       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
+    \end{tabular}
+\end{center}
+}
+
+\end{frame}
+
 
 \begin{frame}{Rabi Formula Works}
+
+
+\begin{textblock*}{10pt}(170pt,-1pt)
+{\tiny
+\begin{equation*}
+\vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m
+    \end{pmatrix} + \frac{A\sin 2\theta_{\mathrm m}}{2}\begin{pmatrix}
+     \cos(kx)\\
+    -\sin(kx)\\
+    0
+    \end{pmatrix} + \frac{A\sin 2\theta_{\mathrm m}}{2}\begin{pmatrix}
+    \cos(-kx)\\
+    -\sin(-kx)\\
+    0
+    \end{pmatrix}
+\end{equation*}
+}
+\end{textblock*}
 
 
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency}
 %stimulated-neutrino-oscillations-kneller.png}
 \caption*{
-Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.\\
-Lines: Rabi formula
+Lines: Rabi formula\\
+Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.
 }
 \end{figure}
+
+\tiny
+\centering
+$\alpha_{2,\mathrm C} = 2 \alpha = 2 \times \frac{A\sin 2\theta_{\mathrm m}}{2}$
 
 
 \end{frame}
@@ -1522,27 +1609,33 @@ Lines: Rabi formula
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Interferences of Rabi Oscillations}
+\section{Jacobi-Anger Expansion}
 
 
 
 \begin{frame}{Interferences of Rabi Oscillations}
 
-Matter profile with two frequencies,
+We have been making approximations.
 
-\begin{equation*}
-    \lambda(x) = \lambda_0  + \frac{\alpha_1}{2}\sin(k_1 x) \sigma_1 
-\end{equation*}
+
+\begin{align*}
+    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}A\cos(kx) $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}A \cos(kx)  \sigma_1\\
+    \to& -\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \cos(kx)\sigma_1 
+\end{align*}
+
+A better basis
+
+
 
 \end{frame}
 
 
 
+\subsection{Basis and Formalism}
 
 
 
-
-\begin{frame}{Understanding Stimulated Oscillations}
+\begin{frame}{Rabi Basis}
 
 
 Matter profile
@@ -1561,7 +1654,7 @@ Matter profile
 \begin{tcolorbox}[title=A Better Basis]
 
 
-Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
+Define Rabi basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
 
 \begin{equation*}
     \begin{pmatrix}
@@ -1578,7 +1671,7 @@ Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }
 where
 
 \begin{equation*}
-    \eta(x) - \eta(0) = - \frac{\omega_{\mathrm{m}}}{2} x + \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\delta\lambda (\tau)} d\tau.
+    \eta(x) - \eta(0) = \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\delta\lambda (\tau)} d\tau.
 \end{equation*}
 
 \end{tcolorbox}
@@ -1600,7 +1693,7 @@ where
 
 
 
-\subsection{Single Frequency Matter Profile}
+
 
 
 
@@ -1609,7 +1702,7 @@ where
 
 Hamiltonian in new basis
 \begin{equation*}
-    \mathbf{\widetilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} = \begin{pmatrix}
+    \mathbf{\widetilde H} = - \frac{\omega_{\mathrm m}}{2}\sigma_3- \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} = - \frac{\omega_{\mathrm m}}{2}\sigma_3 + \begin{pmatrix}
     0 & h \\
     h^* & 0
     \end{pmatrix}
@@ -1617,31 +1710,6 @@ Hamiltonian in new basis
 
 
 
-
-% \only<1>{
-
-% \begin{tcolorbox}[title=Hamiltonian in New Basis]
-
-% \begin{equation*}
-%     \frac{i}{4}\begin{pmatrix}
-%     0 & e^{i(k x + 2\eta)} - e^{i(-k x + 2\eta)} \\
-%     e^{i(k x - 2\eta)} - e^{i(-k x - 2\eta)} & 0
-%     \end{pmatrix}
-% \end{equation*}
-
-% \begin{equation*}
-%     \eta(x) = - \frac{\omega_{\mathrm m} }{2}x - \frac{\cos 2\theta_{\mathrm m} }{2} \frac{A}{k} \cos (k x ).
-% \end{equation*}
-
-% \begin{equation*}
-%     \phantom{\frac{1}{2}}\\
-%     \phantom{1}
-% \end{equation*}
-
-% \end{tcolorbox}
-% }
-
-%\only<2>{
 \begin{tcolorbox}[title=Hamiltonian in New Basis]
 
 \begin{align*}
