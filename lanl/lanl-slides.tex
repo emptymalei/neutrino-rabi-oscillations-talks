@@ -925,44 +925,6 @@ P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  \sin^2(2\theta_{\mathrm{m}}) \sin^
 
 
 
-\begin{frame}{MSW Effect}
-
-
-Suppose $\omega_{\mathrm v} = (m_2^2 - m_1^2)/2E <0$,
-
-\begin{equation*}
-    \mathbf{H} = \colorbox{blue!20}{$
-    -\frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} 
-    $}
-             \colorbox{red!20}{$
-            + \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
-            1 & 0 \\
-            0 & 0
-            \end{pmatrix}
-            $}
-\end{equation*}
-
-\centering
-$\big\downarrow$
-
-\begin{equation*}
-    \mathbf{H} =
-    \left( 
-    %\colorbox{blue!20}{$ 
-     \frac{-\omega_{\mathrm{v}}}{2} \cos 2\theta_{\mathrm{v}}  
-    % $} \colorbox{red!20}{$ 
-    + \frac{\lambda(x)}{2}
-    % $}
-    \right) \boldsymbol{\sigma_3}
-    % \colorbox{blue!20}{$ 
-            - \frac{\omega_{\mathrm v}}{2}\sin 2\theta_{\mathrm v} \boldsymbol{\sigma_1}
-     %       $}
-\end{equation*}
-
-\end{frame}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Parametric Effect %%%%%%%%%%%%%%%
@@ -1082,36 +1044,23 @@ Astrophysical environments: supernovae, accretion disks etc
 
 
 \only<1-1>{
-% Matter profile
+
+\begin{textblock*}{10pt}(280pt,1pt)
+\small
+\begin{equation*}
+\lambda(x) =\sqrt{2}G_{\mathrm F}n_e    
+\end{equation*}
+
+\end{textblock*}
+
+
+
+
 \begin{tcolorbox}[title=Matter Profile]
-\begin{equation*}
-    \lambda(x)  = \lambda_0 + {\color{red}\delta\lambda(x)}
-\end{equation*}
-\end{tcolorbox}
-
-
-% Basis
-
-
-\begin{tcolorbox}[title=Basis]
-
-Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
-
-\begin{equation*}
-    \mathrm{H}_{\mathrm{background}} = -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
-\end{equation*}
-
-\end{tcolorbox}
-
-
-% Hamiltonian of with perturbation in matter profile, in background matter basis
-\begin{tcolorbox}[title=Hamiltonian]
-
-\begin{equation*}
-    \mathbf H = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
-\end{equation*}
-
-
+\begin{align*}
+    &n_e(x) = n_0 + \delta n(x) \\
+    \Rightarrow & \lambda(x) = \lambda_0 + \delta \lambda(x)
+\end{align*}
 \end{tcolorbox}
 
 }
@@ -1185,7 +1134,42 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 
 \begin{frame}{Hamiltonian}
 
+\only<1>{
+% Matter profile
+\begin{tcolorbox}[title=Matter Profile]
+\begin{equation*}
+    \lambda(x)  = \lambda_0 + {\color{red}\delta\lambda(x)}
+\end{equation*}
+\end{tcolorbox}
 
+
+% Basis
+
+
+\begin{tcolorbox}[title=Basis]
+
+Background matter basis (eigen energy basis): Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
+
+\begin{equation*}
+    \mathrm{H}_{\mathrm{background}} = -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
+\end{equation*}
+
+\end{tcolorbox}
+
+
+% Hamiltonian of with perturbation in matter profile, in background matter basis
+\begin{tcolorbox}[title=Hamiltonian]
+
+\begin{equation*}
+    \mathbf H = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
+\end{equation*}
+
+
+\end{tcolorbox}
+
+}
+
+\only<2>{
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
     \begin{equation*}
@@ -1204,6 +1188,28 @@ Matter profile
     \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} +  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1.
 \end{equation*}
 
+}
+
+\only<3>{
+
+\begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
+    \begin{equation*}
+    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \sigma_3 - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \sigma_1.
+\end{equation*}
+\end{tcolorbox}
+
+
+Matter profile
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
+\end{equation*}
+
+
+\begin{equation*}
+    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1.
+\end{equation*}
+
+}
 
 
 
@@ -1277,6 +1283,15 @@ is Rabi frequency.
 
 \only<3>{
 
+
+\begin{textblock*}{10pt}(160pt,1pt)
+\small
+\begin{equation*}
+  \frac{1}{2}\left( - \omega_{\mathrm{m}} +  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1
+\end{equation*}
+\end{textblock*}
+
+
 The transition probability from low energy to high energy is
 
 \begin{equation*}
@@ -1310,65 +1325,15 @@ where
 
 \end{frame}
 
-\begin{frame}{Visualizing Rabi Oscillations}
-
-\begin{textblock*}{10pt}(250pt,1pt)
-\small
-\begin{equation*}
-  % The Pauli matrices form
-  %-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt)\sigma_1 + \frac{\alpha}{2}\sin(kt)\sigma_2
-  % The single matrix form
-   -\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \begin{pmatrix}
-    0 & e^{ikt}\\
-    e^{-ikt} & 0
-    \end{pmatrix}
-\end{equation*}
-\end{textblock*}
 
 
 
-\begin{columns}[T]
-\begin{column}{0.6\textwidth}
-
-\begin{align*}
-    &-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt) \sigma_1 + \frac{\alpha}{2}\sin(kt) \sigma_2 \\
-= & \begin{pmatrix}
-\alpha \cos(kt) &
--\alpha \sin(kt) &
-\omega_0
-\end{pmatrix}
-\colorbox{blue!20}{$\begin{pmatrix}
--\sigma_1/2 \\
--\sigma_2/2 \\
--\sigma_3/2
-\end{pmatrix}
-$} \\
-=& \vec H \cdot (-\vec{\sigma}/2)
-\end{align*}
-
-\end{column}%
-\begin{column}{0.4\textwidth}
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth,trim={2cm 0 3cm 0},clip]{assets/rabi-bloch-vector-rotation}
-\end{figure}
 
 
-\end{column}
-\end{columns}
-
-
-\begin{equation*}
-    D = \left\vert\frac{\omega_0 - k}{\alpha} \right\vert
-\end{equation*}
-
-is ratio of the energy gap in corotating frame to width of resonance.
-
-\end{frame}
 
 \begin{frame}{Interferences of Rabi Oscillations}
 
-\begin{textblock*}{10pt}(250pt,16pt)
+\begin{textblock*}{10pt}(270pt,1pt)
 \small
 \begin{equation*}
   % The Pauli matrices form
@@ -1433,7 +1398,7 @@ Two frequencies!
 
 \begin{frame}{Interferences of Rabi Oscillations}
 
-
+\only<1>{
 \begin{equation*}
     \vec H = \begin{pmatrix}
     0\\
@@ -1470,6 +1435,8 @@ Corotating frame of the second frequency,
     \end{pmatrix}$}
 \end{equation*}
 
+}
+
 \only<1>{
 Energy gap in this frame becomes the length of the vector
 
@@ -1486,7 +1453,7 @@ Energy gap in this frame becomes the length of the vector
 \end{equation*}
 }
 
-\only<2>{
+\only<2->{
 Energy gap in this frame becomes the length of the vector
 \begin{equation*}
 \sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
@@ -1704,8 +1671,8 @@ Hamiltonian in new basis
 
 \begin{align*}
     h &\equiv -\frac{ {\color{red}\delta \lambda(x)}  }{2} e^{2i\eta(x)} \\
-    & = \frac{i}{4}\left[ \exp\left(i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right. \\
-    &\phantom{=} \left. - \exp\left(i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right]
+    & = \frac{i}{4}\left[ \exp\left(ik x + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $}\right) \right. \\
+    &\phantom{=} \left. - \exp\left(-ik x + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right]
 \end{align*}
 
 
@@ -1740,8 +1707,8 @@ Hamiltonian in new basis
 \end{equation*}
 
 \begin{align*}
-    h & \propto \left[ \exp\left(i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right. \\
-    &\phantom{\propto} \left. - \exp\left(i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right]
+    h & \propto \left[ \exp\left(ik x + \colorbox{red!20}{$ i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right. \\
+    &\phantom{\propto} \left. - \exp\left(-ikx + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right]
 \end{align*}
 
 \end{tcolorbox}
@@ -1792,9 +1759,9 @@ The off-diagonal element of Hamiltonian
 % \end{equation*}
 
 \begin{equation*}
-\mathbf{\widetilde H}= \sum_{n=-\infty}^{\infty} \begin{pmatrix}
-0 & \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k-1) } \hat x}\\
-\frac{1}{2} \hat B_n^* e^{ -i  {\color{blue} (n\hat k-1) } \hat x} & 0
+\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+0 & \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k) } \hat x}\\
+\frac{1}{2} \hat B_n^* e^{ -i  {\color{blue} (n\hat k) } \hat x} & 0
 \end{pmatrix}
 \end{equation*}
 
@@ -2047,6 +2014,46 @@ BACKUP SLIDES
 \end{frame}
 
 
+
+
+\begin{frame}{MSW Effect Inverted Hierarchy}
+
+
+Suppose $\omega_{\mathrm v} = (m_2^2 - m_1^2)/2E <0$,
+
+\begin{equation*}
+    \mathbf{H} = \colorbox{blue!20}{$
+    -\frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} 
+    $}
+             \colorbox{red!20}{$
+            + \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
+            1 & 0 \\
+            0 & 0
+            \end{pmatrix}
+            $}
+\end{equation*}
+
+\centering
+$\big\downarrow$
+
+\begin{equation*}
+    \mathbf{H} =
+    \left( 
+    %\colorbox{blue!20}{$ 
+     \frac{-\omega_{\mathrm{v}}}{2} \cos 2\theta_{\mathrm{v}}  
+    % $} \colorbox{red!20}{$ 
+    + \frac{\lambda(x)}{2}
+    % $}
+    \right) \boldsymbol{\sigma_3}
+    % \colorbox{blue!20}{$ 
+            - \frac{\omega_{\mathrm v}}{2}\sin 2\theta_{\mathrm v} \boldsymbol{\sigma_1}
+     %       $}
+\end{equation*}
+
+\end{frame}
+
+
+
 \begin{frame}{Rabi Oscillations}
 
 
@@ -2063,6 +2070,62 @@ where the electric field is
 \end{equation*}
 
 and $\mathbf d$ is the dipole moment.
+
+\end{frame}
+
+\begin{frame}{Visualizing Rabi Oscillations}
+
+\begin{textblock*}{10pt}(250pt,1pt)
+\small
+\begin{equation*}
+  % The Pauli matrices form
+  %-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt)\sigma_1 + \frac{\alpha}{2}\sin(kt)\sigma_2
+  % The single matrix form
+   -\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \begin{pmatrix}
+    0 & e^{ikt}\\
+    e^{-ikt} & 0
+    \end{pmatrix}
+\end{equation*}
+\end{textblock*}
+
+
+
+\begin{columns}[T]
+\begin{column}{0.6\textwidth}
+
+\begin{align*}
+    &-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt) \sigma_1 + \frac{\alpha}{2}\sin(kt) \sigma_2 \\
+= & \begin{pmatrix}
+\alpha \cos(kt) &
+-\alpha \sin(kt) &
+\omega_0
+\end{pmatrix}
+\colorbox{blue!20}{$\begin{pmatrix}
+-\sigma_1/2 \\
+-\sigma_2/2 \\
+-\sigma_3/2
+\end{pmatrix}
+$} \\
+=& \vec H \cdot (-\vec{\sigma}/2)
+\end{align*}
+
+\end{column}%
+\begin{column}{0.4\textwidth}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth,trim={2cm 0 3cm 0},clip]{assets/rabi-bloch-vector-rotation}
+\end{figure}
+
+
+\end{column}
+\end{columns}
+
+
+\begin{equation*}
+    D = \left\vert\frac{\omega_0 - k}{\alpha} \right\vert
+\end{equation*}
+
+is ratio of the energy gap in corotating frame to width of resonance.
 
 \end{frame}
 
