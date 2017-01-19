@@ -38,7 +38,7 @@
 ]{textpos}
 
 %%%%% eso-pic package that set up a grid system for the slides BEGIN
-\usepackage[texcoord,grid,gridcolor=red!10,subgridcolor=green!10,gridunit=pt]{eso-pic}
+% \usepackage[texcoord,grid,gridcolor=red!10,subgridcolor=green!10,gridunit=pt]{eso-pic}
 % grid,gridcolor=red!20,subgridcolor=green!20,gridunit=pt
 %%%%% eso-pic package that set up a grid system for the slides END
 
@@ -223,7 +223,7 @@ UNM}
 %%%% Neutrino as a Particle
 \subsection{What are Neutrinos}
 
-\begin{frame}{What are Neutrinos?}
+\begin{frame}<presentation:0>[noframenumbering]{What are Neutrinos?}
 
 \begin{figure}
 \includegraphics[width=0.9\linewidth,height=0.9\textheight,keepaspectratio]{assets/beta-decay.png}
@@ -729,11 +729,22 @@ where
 
 \begin{frame}{MSW Effect}
 
+
+\begin{textblock*}{10pt}(200pt,1pt)
+\small
+\begin{equation*}
+  \begin{pmatrix}\ket{\nu_{\mathrm e}} \\ \ket{\nu_{\mathrm \mu} } \end{pmatrix} = \begin{pmatrix}  \cos\theta_{\mathrm{v}}  & \sin\theta_{\mathrm{v}} \\ -\sin\theta_{\mathrm{v}}  & \cos\theta_{\mathrm{v}} \end{pmatrix}   \begin{pmatrix}\ket{\nu_1} \\ \ket{\nu_2}\end{pmatrix}
+\end{equation*}
+\end{textblock*}
+
+
+
+
 Constant matter profile $\lambda_0$ as an example,
 
 \begin{tcolorbox}[title=Significance of $\theta_{\mathrm{m}}$]
 
-Define matter basis $\{\ket{\nu_{\mathrm{L}}}, \ket{\nu_{\mathrm{H}}}\}$
+Define matter basis (eigenenergy basis) $\{\ket{\nu_{\mathrm{L}}}, \ket{\nu_{\mathrm{H}}}\}$
 
 \begin{equation*}
 \begin{pmatrix}
@@ -758,10 +769,17 @@ In matter basis
     \mathbf{H}_{\text{matter-basis}} = -\frac{\omega_{\mathrm m}}{2}\boldsymbol{\sigma_3}
 \end{equation*}
 
+\only<2>{
+
+\begin{tcolorbox}[title=Transition Probability]
+\begin{equation*}
+P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  \sin^2(2\theta_{\mathrm{m}}) \sin^2 \left( \omega_{\mathrm{m}} x \right)
+\end{equation*}
+
+\end{tcolorbox}
 
 
-
-
+}
 
 \end{frame}
 
@@ -771,44 +789,8 @@ In matter basis
 
 
 
-% \begin{frame}{MSW Effect}
 
-% For constant matter profile $\lambda_0$
-
-
-
-% \begin{equation*}
-% P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  {\color{blue}\sin^2(2\theta_{\mathrm{m}})} \sin^2 \left( {\color{red}\omega_{\mathrm{m}}} x \right)
-% \end{equation*}
-
-% \only<1-1>{
-% where
-% \begin{align*}
-%     {\color{red}\omega_{\mathrm{m}}(x) } = & ~\sqrt{ \left(\lambda - \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} \right)^2 + \omega_{\mathrm{v}}^2 \sin^2 2\theta_{\mathrm{v}}  } ,\\
-%     {\color{blue}\tan 2\theta_{\mathrm{m}}} = & ~\frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \cos 2\theta_{\mathrm{v}}\omega_{\mathrm{v}} - \lambda  } .
-% \end{align*}
-% }
-
-
-
-
-% % \only<2->{
-% % \begin{itemize}
-% %     \item Oscillation amplitude depends on $\theta_{\mathrm{m}}$
-% %     \item Oscillation angular frequency is
-% % \begin{equation*}
-% %     \omega_{\mathrm{m}} \geq \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}
-% % \end{equation*}
-
-% % \end{itemize}
-% % }
-
-
-% \end{frame}
-
-
-
-\begin{frame}{MSW Resonance}
+\begin{frame}<presentation:0>[noframenumbering]{MSW Resonance}
 
 
 \begin{tcolorbox}[title=Hamiltonian with Matter Potential]
