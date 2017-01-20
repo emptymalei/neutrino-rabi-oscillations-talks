@@ -487,6 +487,108 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
 
 
 
+\begin{frame}{Flavor Isospin}
+
+
+%%%% only 1 begins
+
+\only<1>{
+
+
+
+Hamiltonian:
+
+\begin{equation*}
+    \mathbf H = - \frac{\vec \sigma}{2}\cdot \vec H
+\end{equation*}
+
+Wave function:
+
+\begin{equation*}
+\vec s = \Psi^{\dagger} \frac{\vec\sigma}{2} \Psi,    
+\end{equation*}
+
+Equation of motion
+
+\begin{equation*}
+\dot{\vec s} = \vec s \times \vec H
+\end{equation*}
+
+\begin{tcolorbox}[title=Hamiltonian $\mathbf H$]
+
+\begin{columns}[T] % align columns
+\begin{column}{.49\textwidth}
+
+\centering Mass basis
+
+
+\begin{align*}
+-\frac{\omega_{\mathrm v} }{2}\boldsymbol{ \sigma_3 } = \begin{pmatrix}
+0\\
+0\\
+\omega_{\mathrm v}
+\end{pmatrix}
+\end{align*}
+
+
+
+\end{column}%
+\hfill%
+
+\begin{column}{.49\textwidth}
+
+\centering Flavor basis
+
+\begin{align*}
+&\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm v } \sigma_3  + \sin 2\theta_{\mathrm{v}} \sigma_1\ \right)\\
+=& \cos 2\theta_{\mathrm v}\begin{pmatrix}
+0\\
+0\\
+\omega_{\mathrm v}
+\end{pmatrix} -\sin 2\theta_{\mathrm v}\begin{pmatrix}
+\omega_{\mathrm v}\\
+0\\
+0
+\end{pmatrix}
+\end{align*}
+
+\end{column}%
+\end{columns}
+
+\end{tcolorbox}
+
+}
+%%%% only 1 endds
+
+
+\only<2>{
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{assets/flavor-isospin-2}
+\end{figure}
+
+
+\end{column}%
+\begin{column}{0.5\textwidth}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{assets/flavor-isospin-1}
+\end{figure}
+
+
+\end{column}
+\end{columns}
+
+}
+
+
+
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Matter Effect %%%%%%%%%%%%%%%
@@ -1868,6 +1970,12 @@ Condition for interference to be important from high orders: width should be lar
 
 
 \begin{frame}{Single Frequency Matter Profile Revisited}
+
+Matter profile
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
+\end{equation*}
+
 
 \only<1>{
 \begin{figure}
