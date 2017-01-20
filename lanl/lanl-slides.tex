@@ -294,7 +294,7 @@ UNM}
 
 \begin{frame}{What is Neutrino Oscillation?}
 
-\setbeamercovered{invisible}
+
 
 
 \only<1-1>{
@@ -352,161 +352,71 @@ UNM}
 \everymath{\displaystyle}
 
 
-\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
-
-\begin{tcolorbox}[title=Equation of Motion]
-
-\begin{equation*}
-i\partial_x \ket{\Psi} = \hat {\mathbf H} \ket{\Psi}
-\end{equation*}
-
-\end{tcolorbox}
-
-
-
-
-\begin{itemize}
-\item Basis: Hamiltonian diagonalized basis/mass basis/propagation basis, $\{ \ket{\nu_1}, \ket{\nu_2}\}$.
-
-\item
-\begin{equation*}
-    \mathbf H = - \frac{\omega_\mathrm v}{2}\boldsymbol{\sigma_3}, \qquad \text{where } \omega_{\mathrm v} = \frac{\delta m^2}{2E}=\frac{m_2^2 - m_1^2}{2E} .
-\end{equation*}
-
-
-
-\item The system can be solved given initial condition of the amplitudes of the two eigenstates $(\braket{\nu_1}{\Psi(0)},\braket{\nu_2}{\Psi(0)} )^T$,
-\begin{equation*}
-    \begin{pmatrix}
-    \braket{\nu_1}{\Psi(x)} \\
-    \braket{\nu_2}{\Psi(x)}
-    \end{pmatrix} = \begin{pmatrix}
-    \braket{\nu_1}{\Psi(0)} \exp\left( i  \omega_{\mathrm v} x /2 \right) \\
-    \braket{\nu_2}{\Psi(0)} \exp\left( -i  \omega_{\mathrm v} x/2 \right)
-    \end{pmatrix} 
-\end{equation*}
-
-
-\end{itemize}
-
-
-
-
-\end{frame}
-
-
-%%%%%%%%%
-
-
 
 \begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
 \setbeamercovered{invisible}
 
-\begin{tcolorbox}[title=Flavor basis]
-
-
-Neutrino wave function in flavor basis $\{\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathrm \mu}} \}$ is related to state in energy basis $\{\ket{\nu_1},\ket{\nu_2} \}$ through
+\begin{tcolorbox}[title=Equation of Motion]
 
 \begin{equation*}
-\begin{pmatrix}\ket{\nu_{\mathrm e}} \\ \ket{\nu_{\mathrm \mu} } \end{pmatrix} = \begin{pmatrix}  \cos\theta_{\mathrm{v}}  & \sin\theta_{\mathrm{v}} \\ -\sin\theta_{\mathrm{v}}  & \cos\theta_{\mathrm{v}} \end{pmatrix}   \begin{pmatrix}\ket{\nu_1} \\ \ket{\nu_2}\end{pmatrix}
+i\partial_x \begin{pmatrix}
+\psi_e\\
+\psi_\mu
+\end{pmatrix} = \mathbf{H}\begin{pmatrix}
+\psi_e\\
+\psi_\mu
+\end{pmatrix}
 \end{equation*}
-$\theta_{\mathrm{v}}$: vacuum mixing angle
-
 
 \end{tcolorbox}
 
 \pause
 
-\begin{tcolorbox}[title=Hamiltonian $\mathbf H$]
-
-\begin{columns}[T] % align columns
-\begin{column}{.49\textwidth}
-
-\centering Mass basis
-
-
-\begin{align*}
-&\frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix}
--1  & 0 \\
-0 & 1
-\end{pmatrix}\\
-=&
--\frac{\omega_{\mathrm v} }{2}\boldsymbol{ \sigma_3 }
-\end{align*}
-
-
-
-\end{column}%
-\hfill%
-
-\begin{column}{.49\textwidth}
-
-\centering Flavor basis
-
-\begin{align*}
-&\frac{\omega_{\mathrm v} }{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} \\
-=&
-\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm{v}}\boldsymbol{ \sigma_3 } + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right)
-\end{align*}
-
-\end{column}%
-\end{columns}
-
-\end{tcolorbox}
-
-
-
-\end{frame}
-
-
-
-
-
-\begin{frame}[fragile]{Nature of Neutrino Oscillation}
-\setbeamercovered{invisible}
-
-
-
-\begin{tcolorbox}[title=Transition Probability]
-
+\begin{tcolorbox}
 \begin{equation*}
-P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin^2 \left( \omega_{\mathrm v} x/2 \right) 
+\mathbf{H} = \frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm v } \boldsymbol{\sigma}_3  + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma}_1\ \right)
 \end{equation*}
+
+
 \begin{itemize}
-    \item $\omega_{\mathrm v}=(m_2^2-m_1^2)/2E$ determines oscillation wavelength.
-    \item Mixing angle $\theta_{\mathrm v}$ determines flavor oscillation amplitude.
+    \item Oscillation frequency:
+\begin{equation*}
+    \omega_{\mathrm v} = \frac{\delta m^2}{2E}=\frac{m_2^2 - m_1^2}{2E}
+\end{equation*}
+\item Mixing angle $\theta_{\mathrm v}$
 \end{itemize}
 
 
-
-
 \end{tcolorbox}
 
 
+
+
+
+
 \end{frame}
+
 
 
 
 \begin{frame}{Flavor Isospin}
-
-
-%%%% only 1 begins
-
-\only<1>{
+\setbeamercovered{invisible}
 
 
 
-Hamiltonian:
 
-\begin{equation*}
-    \mathbf H = - \frac{\vec \sigma}{2}\cdot \vec H
-\end{equation*}
 
-Wave function:
 
-\begin{equation*}
-\vec s = \Psi^{\dagger} \frac{\vec\sigma}{2} \Psi,    
-\end{equation*}
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+
+Hamiltonian: $\mathbf H = - \frac{\vec{\boldsymbol{\sigma}} }{2}\cdot \vec H$
+
+
+Wave function: $\vec s = \Psi^{\dagger} \frac{\vec{\boldsymbol{\sigma}} }{2} \Psi $
+
 
 Equation of motion
 
@@ -514,34 +424,32 @@ Equation of motion
 \dot{\vec s} = \vec s \times \vec H
 \end{equation*}
 
-\begin{tcolorbox}[title=Hamiltonian $\mathbf H$]
-
-\begin{columns}[T] % align columns
-\begin{column}{.49\textwidth}
-
-\centering Mass basis
-
-
-\begin{align*}
--\frac{\omega_{\mathrm v} }{2}\boldsymbol{ \sigma_3 } = \begin{pmatrix}
-0\\
-0\\
-\omega_{\mathrm v}
-\end{pmatrix}
-\end{align*}
-
-
 
 \end{column}%
-\hfill%
+\begin{column}{0.5\textwidth}
 
-\begin{column}{.49\textwidth}
 
-\centering Flavor basis
+\begin{figure}
+    \centering
+    \vspace*{-10pt}
+    \includegraphics[width=\textwidth]{assets/flavor-isospin-illus}
+\end{figure}
+
+
+\end{column}
+\end{columns}
+
+\pause
+
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+Vacuum oscillation Hamiltonian
 
 \begin{align*}
-&\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm v } \sigma_3  + \sin 2\theta_{\mathrm{v}} \sigma_1\ \right)\\
-=& \cos 2\theta_{\mathrm v}\begin{pmatrix}
+&\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm v } \boldsymbol{\sigma}_3  + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma}_1\ \right)\\
+\to & \cos 2\theta_{\mathrm v}\begin{pmatrix}
 0\\
 0\\
 \omega_{\mathrm v}
@@ -552,37 +460,22 @@ Equation of motion
 \end{pmatrix}
 \end{align*}
 
-\end{column}%
-\end{columns}
-
-\end{tcolorbox}
-
-}
-%%%% only 1 endds
-
-
-\only<2>{
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{assets/flavor-isospin-2}
-\end{figure}
-
 
 \end{column}%
 \begin{column}{0.5\textwidth}
+
+
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{assets/flavor-isospin-1}
+    \vspace*{-20pt}
+    \includegraphics[width=0.7\textwidth]{assets/flavor-isospin-1}
 \end{figure}
+
 
 
 \end{column}
 \end{columns}
 
-}
 
 
 
@@ -614,8 +507,8 @@ Equation of motion
 \centering
 \includegraphics[height=0.42\textheight]{assets/neutral-current.png}
 \caption*{Neutral current interaction between\\
-$\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, \\
-and $e^{-}$, quarks and antiquarks.}
+$\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, 
+and $e^{-}$, quarks etc.}
 \end{minipage}%
 \begin{minipage}[b]{0.5\linewidth}
 \centering
@@ -688,44 +581,6 @@ and $e^{-}$, quarks and antiquarks.}
 
 
 
-
-% \only<2-2>{
-% \begin{equation*}
-%     \mathbf{H} = 
-%     \tikz[baseline]{
-%             \node[fill=blue!20,anchor=base] (t1)
-%             {$ \frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} $}
-%             } + 
-%             \tikz[baseline]{
-%             \node[fill=red!20, anchor=base] (t2)
-%             {$ 
-%             \frac{\sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)}{2} \begin{pmatrix}
-%             1 & 0 \\
-%             0 & -1
-%             \end{pmatrix}
-%             $};
-%         }
-% \end{equation*}
-
-% }
-
-% \only<2>{
-% \begin{equation*}
-%     \mathbf{H} = 
-%     \tikz[baseline]{
-%             \node[fill=blue!20,anchor=base] (t1)
-%             {$ \frac{\omega_{\mathrm{v}}}{2}\left( - \cos 2\theta_{\mathrm{v}} \boldsymbol{\sigma_3} + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right) $}
-%             } + 
-%             \tikz[baseline]{
-%             \node[fill=red!20, anchor=base] (t2)
-%             {$ 
-%             \frac{\sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)}{2} \boldsymbol{\sigma_3}
-%             $};
-%         }
-% \end{equation*}
-
-% }
-
 \only<2->{
 \begin{equation*}
     \mathbf{H} = 
@@ -792,41 +647,93 @@ and $e^{-}$, quarks and antiquarks.}
 
 \begin{frame}{MSW Effect}
 
-
-
-\begin{tcolorbox}[title=Hamiltonian in Vacuum]
-
-\begin{equation*}
-    \mathbf{H}_{\mathrm{vacuum}}=\frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
-\end{equation*}
-
-\end{tcolorbox}
-
-
-
-
-% \begin{align*}
-%     \mathbf{H} &= \left({\color{red}\frac{\lambda(x)  }{2} } {\color{blue}- \frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}  }{2} } \right) \boldsymbol{\sigma_3} {\color{blue} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} } \boldsymbol{\sigma_1}  \\
-%     & =\frac{  {\color{red}\omega_{\mathrm{m}}(x) }    {\color{blue}\cos 2\theta_{\mathrm{m}}(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_{\mathrm{m}}(x) }   {\color{blue}\sin 2\theta_{\mathrm{m}}(x) } }{2} \boldsymbol{\sigma_1},
-% \end{align*}
-
 \begin{align*}
-    \mathbf{H} &= \frac{\lambda(x) - \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}  }{2}  \boldsymbol{\sigma_3}  + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2}  \boldsymbol{\sigma_1}  \\
-    & =\frac{ \omega_{\mathrm{m}}(x)   \cos 2\theta_{\mathrm{m}}(x)  }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{m}}(x)    \sin 2\theta_{\mathrm{m}}(x)  }{2} \boldsymbol{\sigma_1},
+    \mathbf H =& \colorbox{blue!20}{$ \frac{\omega_{\mathrm{v}}}{2}\left( - \cos 2\theta_{\mathrm{v}} \boldsymbol{\sigma_3} + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right) $}   \colorbox{red!20}{$ + \frac{\lambda(x)}{2} \boldsymbol{\sigma_3} $} \\
+    \to &  \colorbox{blue!20}{$ \omega_{\mathrm v}\begin{pmatrix}
+    - \sin 2\theta_{\mathrm v} \\
+    0 \\
+    \cos 2\theta_{\mathrm v}
+    \end{pmatrix} $}  \colorbox{red!20}{$ + \begin{pmatrix}
+    0\\
+    0\\
+    - \lambda(x)
+    \end{pmatrix} $} \\
+    \to &  \colorbox{blue!20}{$ \vec H_{\mathrm v} $}  \colorbox{red!20}{$ + \vec H_{\mathrm m}(x) $}
 \end{align*}
 
 
-where
-
-\begin{align*}
-    \omega_{\mathrm{m}}(x)  = & ~\sqrt{ \left(\lambda(x) - \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} \right)^2 + \omega_{\mathrm{v}}^2 \sin^2 2\theta_{\mathrm{v}}  } ,\\
-    \tan 2\theta_{\mathrm{m}}(x)  = & ~\frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} - \lambda(x)  }.
-\end{align*}
 
 
 
 
 \end{frame}
+
+
+
+\begin{frame}{MSW Effect}
+
+
+\only<1>{
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{assets/matter-effect-large-density}
+\end{figure}
+
+
+\end{column}%
+\begin{column}{0.5\textwidth}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/matter-effect-notsolarge-density}
+\end{figure}
+
+
+
+\end{column}
+\end{columns}
+
+}
+
+\only<2> {
+
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{assets/matter-effect-critical-density}
+\end{figure}
+
+
+\end{column}%
+\begin{column}{0.5\textwidth}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/matter-effect-small-density}
+\end{figure}
+
+
+
+\end{column}
+\end{columns}
+
+
+
+
+}
+
+
+\end{frame}
+
 
 
 \begin{frame}{MSW Effect}
@@ -2118,6 +2025,141 @@ Rabi oscillations with two driving fields of different frequencies: large width 
 \centering
 BACKUP SLIDES
 \end{tcolorbox}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
+
+\begin{tcolorbox}[title=Equation of Motion]
+
+\begin{equation*}
+i\partial_x \ket{\Psi} = \hat {\mathbf H} \ket{\Psi}
+\end{equation*}
+
+\end{tcolorbox}
+
+
+
+
+\begin{itemize}
+\item Basis: Hamiltonian diagonalized basis/mass basis/propagation basis, $\{ \ket{\nu_1}, \ket{\nu_2}\}$.
+
+\item
+\begin{equation*}
+    \mathbf H = - \frac{\omega_\mathrm v}{2}\boldsymbol{\sigma_3}, \qquad \text{where } \omega_{\mathrm v} = \frac{\delta m^2}{2E}=\frac{m_2^2 - m_1^2}{2E} .
+\end{equation*}
+
+
+
+\item The system can be solved given initial condition of the amplitudes of the two eigenstates $(\braket{\nu_1}{\Psi(0)},\braket{\nu_2}{\Psi(0)} )^T$,
+\begin{equation*}
+    \begin{pmatrix}
+    \braket{\nu_1}{\Psi(x)} \\
+    \braket{\nu_2}{\Psi(x)}
+    \end{pmatrix} = \begin{pmatrix}
+    \braket{\nu_1}{\Psi(0)} \exp\left( i  \omega_{\mathrm v} x /2 \right) \\
+    \braket{\nu_2}{\Psi(0)} \exp\left( -i  \omega_{\mathrm v} x/2 \right)
+    \end{pmatrix} 
+\end{equation*}
+
+
+\end{itemize}
+
+
+
+
+\end{frame}
+
+
+%%%%%%%%%
+
+
+
+\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
+\setbeamercovered{invisible}
+
+\begin{tcolorbox}[title=Flavor basis]
+
+
+Neutrino wave function in flavor basis $\{\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathrm \mu}} \}$ is related to state in energy basis $\{\ket{\nu_1},\ket{\nu_2} \}$ through
+
+\begin{equation*}
+\begin{pmatrix}\ket{\nu_{\mathrm e}} \\ \ket{\nu_{\mathrm \mu} } \end{pmatrix} = \begin{pmatrix}  \cos\theta_{\mathrm{v}}  & \sin\theta_{\mathrm{v}} \\ -\sin\theta_{\mathrm{v}}  & \cos\theta_{\mathrm{v}} \end{pmatrix}   \begin{pmatrix}\ket{\nu_1} \\ \ket{\nu_2}\end{pmatrix}
+\end{equation*}
+$\theta_{\mathrm{v}}$: vacuum mixing angle
+
+
+\end{tcolorbox}
+
+\pause
+
+\begin{tcolorbox}[title=Hamiltonian $\mathbf H$]
+
+\begin{columns}[T] % align columns
+\begin{column}{.49\textwidth}
+
+\centering Mass basis
+
+
+\begin{align*}
+&\frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix}
+-1  & 0 \\
+0 & 1
+\end{pmatrix}\\
+=&
+-\frac{\omega_{\mathrm v} }{2}\boldsymbol{ \sigma_3 }
+\end{align*}
+
+
+
+\end{column}%
+\hfill%
+
+\begin{column}{.49\textwidth}
+
+\centering Flavor basis
+
+\begin{align*}
+&\frac{\omega_{\mathrm v} }{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} \\
+=&
+\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm{v}}\boldsymbol{ \sigma_3 } + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right)
+\end{align*}
+
+\end{column}%
+\end{columns}
+
+\end{tcolorbox}
+
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Nature of Neutrino Oscillation}
+\setbeamercovered{invisible}
+
+
+
+\begin{tcolorbox}[title=Transition Probability]
+
+\begin{equation*}
+P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin^2 \left( \omega_{\mathrm v} x/2 \right) 
+\end{equation*}
+\begin{itemize}
+    \item $\omega_{\mathrm v}=(m_2^2-m_1^2)/2E$ determines oscillation wavelength.
+    \item Mixing angle $\theta_{\mathrm v}$ determines flavor oscillation amplitude.
+\end{itemize}
+
+
+
+
+\end{tcolorbox}
+
 
 \end{frame}
 
