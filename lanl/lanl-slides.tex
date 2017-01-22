@@ -243,8 +243,9 @@ UNM}
 
 \begin{column}{0.6\textwidth}
 \begin{figure}
-\includegraphics[width=0.9\linewidth,height=0.8\textheight,keepaspectratio]{assets/elementary-particles.jpg}
-\caption*{Table of elementary particles. Source: Fermilab} % http://www-d0.fnal.gov/Run2Physics/WWW/results/final/TOP/T06C/T06C.html
+%\includegraphics[width=0.9\linewidth,height=0.8\textheight,keepaspectratio]{assets/elementary-particles}
+\includegraphics[width=0.9\linewidth,height=0.8\textheight,keepaspectratio]{assets/standard-model}
+\caption*{Elementary particles. \\ Source: symmetrymagazine.org} % http://www-d0.fnal.gov/Run2Physics/WWW/results/final/TOP/T06C/T06C.html
 \end{figure}
 \end{column}
 
@@ -356,6 +357,25 @@ UNM}
 \begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
 \setbeamercovered{invisible}
 
+
+\begin{textblock*}{10pt}(225pt,1pt)
+\small
+\begin{equation*}
+\begin{pmatrix}
+\psi_e\\
+\psi_\mu
+\end{pmatrix} = \begin{pmatrix}
+\cos \theta_v & \sin\theta_v \\
+-\sin \theta_v & \cos \theta_v
+\end{pmatrix}\begin{pmatrix}
+\psi_1\\
+\psi_2
+\end{pmatrix}
+\end{equation*}
+
+\end{textblock*}
+
+
 \begin{tcolorbox}[title=Equation of Motion]
 
 \begin{equation*}
@@ -415,7 +435,7 @@ i\partial_x \begin{pmatrix}
 Hamiltonian: $\mathbf H = - \frac{\vec{\boldsymbol{\sigma}} }{2}\cdot \vec H$
 
 
-Wave function: $\vec s = \Psi^{\dagger} \frac{\vec{\boldsymbol{\sigma}} }{2} \Psi $
+Flavor isospin: $\vec s = \Psi^{\dagger} \frac{\vec{\boldsymbol{\sigma}} }{2} \Psi $
 
 
 Equation of motion
@@ -490,10 +510,10 @@ Vacuum oscillation Hamiltonian
 \section{Matter Effect}
 
 
-\subsection{Matter Interactions}
+\subsection{Interactions with Matter}
 
 
-\begin{frame}{Matter Interactions}
+\begin{frame}{Interactions with Matter}
 
 
 % \begin{tcolorbox}[title=PLACEHOLDER]
@@ -604,7 +624,7 @@ and $e^{-}$, quarks etc.}
         \tikz[na]\node [coordinate] (n2) {};
     \item Matter interaction
         \tikz[na]\node [coordinate] (n3) {};
-    \item<2-> $\lambda(x) = \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)$ 
+    \item<1-> $\lambda(x) = \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)$ 
 \end{itemize}
 
 
@@ -678,6 +698,12 @@ and $e^{-}$, quarks etc.}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
+\begin{textblock*}{70pt}(50pt,250pt)
+\small
+Large density
+\end{textblock*}
+
+
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{assets/matter-effect-large-density}
@@ -686,6 +712,7 @@ and $e^{-}$, quarks etc.}
 
 \end{column}%
 \begin{column}{0.5\textwidth}
+
 
 
 \begin{figure}
@@ -706,6 +733,11 @@ and $e^{-}$, quarks etc.}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
+\begin{textblock*}{70pt}(50pt,250pt)
+\small
+MSW Resonance
+\end{textblock*}
+
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{assets/matter-effect-critical-density}
@@ -714,6 +746,13 @@ and $e^{-}$, quarks etc.}
 
 \end{column}%
 \begin{column}{0.5\textwidth}
+
+
+\begin{textblock*}{70pt}(250pt,250pt)
+\small
+Low density
+\end{textblock*}
+
 
 
 \begin{figure}
@@ -935,7 +974,7 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 \section{Stimulated Neutrino Flavor Transitions}
 
 
-\subsection{Rabi Oscillations}
+
 
 
 
@@ -1259,10 +1298,10 @@ Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\t
 \end{frame}
 
 
-\subsection{Interferences of Rabi Oscillations}
+\subsection{Oscillations With Multifrequencies}
 
 
-\begin{frame}{Interferences of Rabi Oscillations}
+\begin{frame}{Oscillations With Multifrequencies}
 
 
 \begin{textblock*}{10pt}(280pt,-1pt)
@@ -1309,7 +1348,7 @@ Dropping off-resonance frequency: Requirement?
 
 
 
-\begin{frame}{Interferences of Rabi Oscillations}
+\begin{frame}{Oscillations With Multifrequencies}
 
 \only<1>{
 \begin{equation*}
@@ -1385,7 +1424,7 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 
 
-\begin{frame}{Interferences of Rabi Oscillations}
+\begin{frame}{Oscillations With Multifrequencies}
 
 
 
@@ -1416,7 +1455,7 @@ Destruction effect: $k_1 = \omega_{\mathrm m}$, $\lvert \alpha_2\rvert \gg \sqrt
 \end{frame}
 
 
-\begin{frame}{Interferences of Rabi Oscillations}
+\begin{frame}{Oscillations With Multifrequencies}
 
 
 \begin{figure}
@@ -1471,20 +1510,25 @@ Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\t
 }
 \end{figure}
 
-\tiny
-\centering
-$\alpha_{2,\mathrm C} = 2 \alpha = 2 \times \frac{A\sin 2\theta_{\mathrm m}}{2}$
+\begin{textblock*}{50pt}(220pt,50pt)
 
+\begin{align*}
+    \alpha_2 =& \alpha =\frac{A\sin 2\theta_{\mathrm m}}{2}     \\
+    \alpha_{2,\mathrm C} = & 2 \alpha    
+\end{align*}
+
+
+\end{textblock*}
 
 \end{frame}
 
 
 
-\section{Jacobi-Anger Expansion}
+\section{Single Frequency Matter Profile Revisited}
 
 
 
-\begin{frame}{Interferences of Rabi Oscillations}
+\begin{frame}{Hamiltonian for Single Frequency Matter Profile}
 
 We have been making approximations.
 
