@@ -1321,11 +1321,11 @@ Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\t
 
 
 
-\section{Single Frequency Matter Profile Revisited}
+\section{Single Frequency Matter Potential Revisited}
 
 
 
-\begin{frame}{Single Frequency Matter Profile Revisited}
+\begin{frame}{Single Frequency Matter Potential Revisited}
 
 We have been making approximations.
 
@@ -1393,7 +1393,7 @@ where
 
 
 
-\begin{frame}{Single Frequency Matter Profile}
+\begin{frame}{Single Frequency Matter Potential}
 
 
 Matter profile
@@ -1434,7 +1434,7 @@ Hamiltonian in new basis
 
 
 
-\begin{frame}{Single Frequency Matter Profile}
+\begin{frame}{Single Frequency Matter Potential}
 
 
 
@@ -1475,7 +1475,7 @@ where $J_n(\beta)$ are Bessel's functions of the first kind.
 
 
 
-\begin{frame}{Single Frequency Matter Profile}
+\begin{frame}{Single Frequency Matter Potential}
 
 \only<1-1>{
 \begin{tcolorbox}[title=Scaled Quantities]
@@ -1499,9 +1499,6 @@ Characteristic scale: $\omega_{\mathrm{m}}$
 
 The off-diagonal element of Hamiltonian
 
-% \begin{equation*}
-% \hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k-1) } \hat x},
-% \end{equation*}
 
 \begin{equation*}
 \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
@@ -1514,19 +1511,11 @@ The off-diagonal element of Hamiltonian
 where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \cos 2\theta_{\mathrm{m}} / \hat k ) $.
 
 
-%${\color{blue} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
+
 
 \end{tcolorbox}
 
 
-% \begin{tcolorbox}[title=Near Resonance]
-% \centering
-% small ${\color{blue} (n\hat k-1)}$ $\to$ important term
-
-% \centering
-% Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\color{blue} n\hat k -1}$.
-
-% \end{tcolorbox}
 
 }
 
@@ -1537,10 +1526,150 @@ where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \c
 
 
 
+\begin{frame}{Rabi Oscillations With Multifrequencies}
+
+\only<1>{
+\begin{equation*}
+    \vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m
+    \end{pmatrix} + \alpha_1\begin{pmatrix}
+     \cos(k_1x)\\
+    -\sin(k_1x)\\
+    0
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    \cos(k_2x)\\
+    -\sin(k_2x)\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+
+Corotating frame of the second frequency,
 
 
 
-\begin{frame}{Single Frequency Matter Profile}
+\begin{equation*}
+    \vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+    \end{pmatrix} + \alpha_1\begin{pmatrix}
+     \cos(k_1-k_2x)\\
+    -\sin(k_1-K_2x)\\
+    0
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+
+}
+
+\only<1>{
+Energy gap in this frame becomes the length of the vector
+
+\begin{equation*}
+    \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+}
+
+\only<2->{
+Energy gap in this frame becomes the length of the vector
+\begin{equation*}
+\sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
+\end{equation*}
+
+Relative detuning
+
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+
+}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Rabi Oscillations With Multifrequencies}
+
+
+
+Consider $k_1=\omega_{\mathrm m}$
+
+\begin{equation*}
+D' =  \left\vert \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert 
+\end{equation*}
+
+Amplitude reduces from 1 to 1/2 if
+
+\begin{equation*}
+    D'=1.
+\end{equation*}
+
+
+\vspace{2em}
+
+\begin{tcolorbox}
+Two driving frequencies $k_1$, and $k_2$, with amplitude $\alpha_1$, and $\alpha_2$
+
+Destruction effect: $k_1 = \omega_{\mathrm m}$, 
+
+\begin{equation*}
+    \lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}
+\end{equation*}
+
+\end{tcolorbox}
+
+
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{Rabi Oscillations With Multifrequencies}
+
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
+\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
+}
+\end{figure}
+
+% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
+
+{\tiny
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
+    \hline
+       Dashed  &  dotted & dash-dotted & solid \\
+       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
+    \end{tabular}
+\end{center}
+}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Single Frequency Matter Potential}
 
 
 
@@ -1570,62 +1699,9 @@ Condition for interference to be important from high orders: width should be lar
 \end{frame}
 
 
+\subsection{Multifrequency Matter Potential}
 
-
-
-
-
-% \begin{frame}{Single Frequency Matter Profile}
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{assets/stimulated-oscillation-rwa-and-numerical.png}
-%     \caption*{$\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
-% \end{figure}
-
-% \end{frame}
-
-
-
-\begin{frame}{Single Frequency Matter Profile Revisited}
-
-Matter profile
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
-\end{equation*}
-
-
-\only<1>{
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-1}
-    
-\end{figure}
-}
-
-\only<2>{
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-2}
-    
-\end{figure}
-}
-
-\only<3>{
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-3}
-    
-\end{figure}
-}
-
-
-\end{frame}
-
-
-
-
-\begin{frame}{Castle Wall Matter Profile}
+\begin{frame}{Castle Wall Matter Potential}
 
 
 
@@ -1634,30 +1710,13 @@ Matter profile
 \begin{column}{0.5\textwidth}
 
 
-\only<1>{
+
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{assets/castlewall-profile}
     \caption{Castle wall matter profile}
 \end{figure}
-}
 
-
-\only<2>{
-
-\begin{table}
-\caption{Relative detuning of each frequency.} 
-\begin{tabular}{lll} 
- $\{n_1,n_2\}$ &  $D$ & $D'_{\{1,0\}}$   \\
-\hline \\
- $\{1,0\}$ & $0$ &  - \\ 
- $\{-1,0\}$ & $48$ &  $1.0\times 10^{-2}$ \\ 
- $\{0,1\}$ & $1.5\times 10^2$ &  $1.1\times 10^{-3}$  \\
- $\{2,0\}$ & $2.4\times 10^{2}$ & $2.0\times 10^{-4}$
-\end{tabular} 
-\end{table}
-
-}
 \end{column}%
 \begin{column}{0.5\textwidth}
 
@@ -1681,33 +1740,47 @@ Matter profile
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Summary & Outlook/Future Work %%%%%%%%%%%%%%
 
-% You should see now what I am trying to do here.
-% In reality, a matter profile can be decomposed into many Fourier modes. If we can find a way to determine which terms are important, it would be very useful for more complicated calculations such as the combination of COLLECTIVE neutrino oscillations and matter effect.
-% Rather easy to numerically solve such systems. However, it is also good to learn the physics behind numerical calculation. Look into the most important term.
+
 
 \section{Summary}
 
 \begin{frame}{Summary}
 
 
-\begin{itemize}\color{ao}
-\item 
-The fact that neutrino flavor sates are not mass states causes vacuum oscillations.
-\item 
-MSW resonance happens when matter potential cancels out the vacuum diagonal elements of the Hamiltonian.
+\begin{columns}[T]
+\begin{column}{0.6\textwidth}
+
+\begin{enumerate}[<+->]
 \item
-Even matter profile doesn't match MSW requirement, variation in matter profile can cause resonances.
+Vacuum oscillations: flavor sates are not mass states.
 \item
-Single frequency perturbations in matter profile is a combination of many Rabi oscillations.
+MSW resonance: matter potential cancels out the vacuum diagonal elements of the Hamiltonian.
 \item
-Rabi oscillations with two driving fields of different frequencies: large width to destroy the resonance.
-\end{itemize}
+Stimulated oscillations: variation in matter profile can cause resonances.
 
+\item
+Oscillations with two driving fields of different frequencies: large width to destroy the resonance.
+\end{enumerate}
 
+\end{column}
+\begin{column}{0.4\textwidth}
 
+\only<1>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/flavor-isospin-1}
+\end{figure}
+}
 
+\only<2>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/matter-effect-critical-density}
+\end{figure}
+}
 
-
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -2577,6 +2650,95 @@ where
 
 
 }
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{Single Frequency Matter Profile Revisited}
+
+Matter profile
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
+\end{equation*}
+
+
+\only<1>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-1}
+    
+\end{figure}
+}
+
+\only<2>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-2}
+    
+\end{figure}
+}
+
+\only<3>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/relative-detuning-and-osc-length-3}
+    
+\end{figure}
+}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Castle Wall Matter Profile}
+
+
+
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+
+
+\only<1>{
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{assets/castlewall-profile}
+    \caption{Castle wall matter profile}
+\end{figure}
+}
+
+
+\only<2>{
+
+\begin{table}
+\caption{Relative detuning of each frequency.} 
+\begin{tabular}{lll} 
+ $\{n_1,n_2\}$ &  $D$ & $D'_{\{1,0\}}$   \\
+\hline \\
+ $\{1,0\}$ & $0$ &  - \\ 
+ $\{-1,0\}$ & $48$ &  $1.0\times 10^{-2}$ \\ 
+ $\{0,1\}$ & $1.5\times 10^2$ &  $1.1\times 10^{-3}$  \\
+ $\{2,0\}$ & $2.4\times 10^{2}$ & $2.0\times 10^{-4}$
+\end{tabular} 
+\end{table}
+
+}
+\end{column}%
+\begin{column}{0.5\textwidth}
+
+\begin{figure}
+        \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
+    % \caption{Transition probilities}
+\end{figure}
+
+
+\end{column}
+\end{columns}
 
 
 
