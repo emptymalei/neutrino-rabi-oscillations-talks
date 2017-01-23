@@ -865,7 +865,7 @@ Low density
 
 \begin{tcolorbox}[title=Why Do We Care]
 
-Astrophysical environments: supernovae, accretion disks etc
+Astrophysical environments: supernovae etc
 
 \end{tcolorbox}
 
@@ -877,10 +877,10 @@ Astrophysical environments: supernovae, accretion disks etc
     % arXiv: 1310.7488
 \end{figure}
 
-\vspace{-1em}
-\begin{equation*}
-\Delta n_e (r) = \sum_n c_n \sin( k_n r + \phi_n )
-\end{equation*}
+% \vspace{-1em}
+% \begin{equation*}
+% \Delta n_e (r) = \sum_n c_n \sin( k_n r + \phi_n )
+% \end{equation*}
     
 
 \end{frame}
@@ -912,8 +912,8 @@ Astrophysical environments: supernovae, accretion disks etc
 
 \begin{tcolorbox}[title=Matter Profile]
 \begin{align*}
-    &n_e(x) = n_0 + \delta n \sin(k x + \phi) \\
-    \Rightarrow & \lambda(x) = \lambda_0 + \delta \lambda \sin(k x + \phi)
+    &n_e(x) = n_0 + \delta n \cos(k x) \\
+    \Rightarrow & \lambda(x) = \lambda_0 + \delta \lambda \cos(k x )
 \end{align*}
 \end{tcolorbox}
 
@@ -933,7 +933,7 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \sin (k x)$  with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$}
+\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \cos (k x)$  with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$}
 \end{figure}
 
 
@@ -1179,11 +1179,28 @@ Rabi frequency
 
 \begin{frame}{Hamiltonian in Matter Basis}
 
+\begin{textblock*}{10pt}(220pt,1pt)
+\small
+\begin{equation*}
+\begin{pmatrix}
+\psi_e\\
+\psi_\mu
+\end{pmatrix} = \begin{pmatrix}
+\cos \theta_m & \sin\theta_m \\
+-\sin \theta_m & \cos \theta_m
+\end{pmatrix}\begin{pmatrix}
+\psi_L\\
+\psi_H
+\end{pmatrix}
+\end{equation*}
+
+\end{textblock*}
+
 
 % Matter profile
-\begin{tcolorbox}[title=Matter Profile]
+\begin{tcolorbox}[title=Matter Potential]
 \begin{equation*}
-    \lambda(x)  = \lambda_0 \only<2>{ + {\color{red}A\sin(k x)} }
+    \lambda(x)  = \lambda_0 \only<2>{ + {\color{red}A\cos(k x)} }
 \end{equation*}
 \end{tcolorbox}
 
@@ -1193,26 +1210,17 @@ Rabi frequency
 
 \begin{tcolorbox}[title=Basis]
 
-Background matter basis (eigen energy basis): Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
+Background matter basis (eigen energy basis): 
 
-\begin{equation*}
-    \mathrm{H}_{\mathrm{background}} = -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
-\end{equation*}
-
-\end{tcolorbox}
-
-
-% Hamiltonian of with perturbation in matter profile, in background matter basis
-\begin{tcolorbox}[title=Hamiltonian]
 
 \begin{equation*}
     \mathbf H = \frac{1}{2}\left( - \omega_{\mathrm{m}} 
     \only<2>{
-    + {\color{red}A\sin(kx)} \cos 2\theta_{\mathrm{m}} 
+    + {\color{red}A\cos(kx)} \cos 2\theta_{\mathrm{m}} 
     } 
     \right) \boldsymbol{\sigma_3} 
     \only<2>{
-    - \frac{{\color{red}A\sin(kx) } }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}
+    - \frac{{\color{red}A\cos(kx) } }{2} \sin 2\theta_{\mathrm{m}} \boldsymbol{\sigma_1}
     }
 \end{equation*}
 
@@ -1233,28 +1241,40 @@ Background matter basis (eigen energy basis): Hamiltonian is diagonalized with o
 
 \begin{frame}{Hamiltonian in Matter Basis}
 
+\begin{textblock*}{10pt}(240pt,1pt)
+\small
+\begin{equation*}
+\alpha = \frac{\sin2\theta_{\mathrm m}}{2}
+\end{equation*}
+
+\end{textblock*}
+
+
+Matter potential frequency
+
+\begin{equation*}
+    k\sim \omega_{\mathrm m}
+\end{equation*}
+
+
 \begin{align*}
-    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}{\color{red}A\sin(kx)} $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \sin(kx)}  \sigma_1 \\
+    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
     \to &  \omega_{\mathrm m}\begin{pmatrix}
     0\\
     0\\
     1
     \end{pmatrix} + \alpha \begin{pmatrix}
-    \sin (kx)\\
-    \cos(k x)\\
+    \cos (kx)\\
+    -\sin(k x)\\
     0
     \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
-    \sin (kx)\\
-    - \cos(k x)\\
+    \cos (-kx)\\
+    -\sin( - k x)\\
     0
     \end{pmatrix} $}
 \end{align*}
 
-where
 
-\begin{equation*}
-    \alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
-\end{equation*}
 
 
 
@@ -1276,8 +1296,8 @@ where
     0\\
     1
     \end{pmatrix} + \alpha \begin{pmatrix}
-    \sin (kx)\\
-    \cos(k x)\\
+    \cos (kx)\\
+    -\sin(k x)\\
     0
     \end{pmatrix} 
 \end{equation*}
@@ -1298,229 +1318,6 @@ Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\t
 \end{frame}
 
 
-\subsection{Oscillations With Multifrequencies}
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-
-\begin{textblock*}{10pt}(280pt,-1pt)
-{\tiny
-\begin{equation*}
-\alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
-\end{equation*}
-}
-\end{textblock*}
-
-
-
-\begin{equation*}
-    \vec {H} 
-    =  \omega_{\mathrm m}\begin{pmatrix}
-    0\\
-    0\\
-    1
-    \end{pmatrix} + \alpha \begin{pmatrix}
-    \sin (kx)\\
-    \cos(k x)\\
-    0
-    \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
-    \sin (kx)\\
-    - \cos(k x)\\
-    0
-    \end{pmatrix} $}
-\end{equation*}
-
-
-
-    
-
-
-
-\begin{tcolorbox}
-Dropping off-resonance frequency: Requirement?
-\end{tcolorbox}
-
-
-\end{frame}
-
-
-
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-\only<1>{
-\begin{equation*}
-    \vec H = \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m
-    \end{pmatrix} + \alpha_1\begin{pmatrix}
-     \cos(k_1x)\\
-    -\sin(k_1x)\\
-    0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
-    \cos(k_2x)\\
-    -\sin(k_2x)\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-
-Corotating frame of the second frequency,
-
-
-
-\begin{equation*}
-    \vec H = \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m - k_2
-    \end{pmatrix} + \alpha_1\begin{pmatrix}
-     \cos(k_1-k_2x)\\
-    -\sin(k_1-K_2x)\\
-    0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
-    1\\
-    0\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-
-}
-
-\only<1>{
-Energy gap in this frame becomes the length of the vector
-
-\begin{equation*}
-    \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m - k_2
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
-    1\\
-    0\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-}
-
-\only<2->{
-Energy gap in this frame becomes the length of the vector
-\begin{equation*}
-\sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
-\end{equation*}
-
-Relative detuning
-
-\begin{equation*}
-D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
-\end{equation*}
-
-}
-
-\end{frame}
-
-
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-
-
-\begin{textblock*}{10pt}(220pt,16pt)
-\small
-\begin{equation*}
-D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
-\end{equation*}
-\end{textblock*}
-
-
-\vspace{2em}
-
-Two driving frequencies $k_1$, and $k_2$, with amplitude $\alpha_1$, and $\alpha_2$
-
-Destruction effect: $k_1 = \omega_{\mathrm m}$, $\lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}$
-
-
-
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=\textwidth,trim={0 0.1cm 0 0.5cm},clip]{assets/rabi-osc-interferenes}
-% \end{figure}
-
-
-
-\end{frame}
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-
-\begin{figure}
-\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
-\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
-}
-\end{figure}
-
-% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
-
-{\tiny
-\begin{center}
-    \begin{tabular}{c|c|c|c}
-    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
-    \hline
-       Dashed  &  dotted & dash-dotted & solid \\
-       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
-    \end{tabular}
-\end{center}
-}
-
-\end{frame}
-
-
-
-\begin{frame}{Rabi Formula Works}
-
-
-\begin{textblock*}{10pt}(230pt,-1pt)
-{\tiny
-\begin{equation*}
-\vec H \sim  \omega_{\mathrm m}\begin{pmatrix}
-    0\\
-    0\\
-    1
-    \end{pmatrix} + \alpha \begin{pmatrix}
-    \sin (kx)\\
-    \cos(k x)\\
-    0
-    \end{pmatrix} 
-\end{equation*}
-}
-\end{textblock*}
-
-
-\begin{figure}
-\includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency}
-%stimulated-neutrino-oscillations-kneller.png}
-\caption*{
-Lines: Rabi formula\\
-Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.
-}
-\end{figure}
-
-\begin{textblock*}{50pt}(220pt,50pt)
-
-\begin{align*}
-    \alpha_2 =& \alpha =\frac{A\sin 2\theta_{\mathrm m}}{2}     \\
-    \alpha_{2,\mathrm C} = & 2 \alpha    
-\end{align*}
-
-
-\end{textblock*}
-
-\end{frame}
 
 
 
@@ -1528,7 +1325,7 @@ Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\t
 
 
 
-\begin{frame}{Hamiltonian for Single Frequency Matter Profile}
+\begin{frame}{Single Frequency Matter Profile Revisited}
 
 We have been making approximations.
 
@@ -1537,9 +1334,6 @@ We have been making approximations.
     \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}A\cos(kx) $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}A \cos(kx)  \sigma_1\\
     \to& -\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \cos(kx)\sigma_1 
 \end{align*}
-
-We need a better basis.
-
 
 
 \end{frame}
@@ -1564,17 +1358,17 @@ We need a better basis.
 \begin{tcolorbox}[title=A Better Basis]
 
 
-Define Rabi basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
+Define Rabi basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} in which the wave function is related to wave function in background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
 
 \begin{equation*}
     \begin{pmatrix}
-    \ket{\nu_{\mathrm{L} }} \\
-    \ket{\nu_{\mathrm{H} }}
+    \psi_{\mathrm{L} } \\
+    \psi_{\mathrm{H} }
     \end{pmatrix} = \begin{pmatrix}
      e^{-i \eta (x)} & 0 \\  0 & e^{i \eta (x)} 
     \end{pmatrix}\begin{pmatrix}
-    \ket{\tilde\nu_{\mathrm{L} }}\\
-    \ket{\tilde\nu_{\mathrm{H} }}
+    \tilde\psi_{\mathrm{L} }\\
+    \tilde\psi_{\mathrm{H} }
     \end{pmatrix},
 \end{equation*}
 
@@ -1743,32 +1537,7 @@ where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \c
 
 
 
-\begin{frame}{Single Frequency Matter Profile}
 
-
-\begin{tcolorbox}[title=Transition Probability]
-
-\begin{equation*}
-    P_{\mathrm{L\to H}}^{(n)} = \frac{  \left\lvert \hat B_{n}  \right\rvert^2 }{ \left\lvert  \hat B_{n}  \right\rvert^2 + ( n \hat k - 1 )^2  } \sin^2 \left( \frac{ q^{(n)} }{2} x \right)  ,
-\end{equation*}
-
-where
-
-\begin{align*}
-    q^{(n)} &= \sqrt{\left\lvert  \Gamma^{(n)} \right\rvert^2 + ( n \hat k - 1 )^2},\quad \text{frequency of oscillations} \\
-    \Gamma^{(n)} &= \left\lvert \hat B_{n} \right\rvert, \quad \text{width of resonance ($n\hat k$ as parameter)}
-\end{align*}
-
-
-\end{tcolorbox}
-
-Resonance conditions
-
-\begin{equation*}
-    \hat k \sim \frac{1}{n}
-\end{equation*}
-
-\end{frame}
 
 
 \begin{frame}{Single Frequency Matter Profile}
@@ -2445,93 +2214,231 @@ and $\mathbf d$ is the dipole moment.
 
 \end{frame}
 
-\begin{frame}{Visualizing Rabi Oscillations}
 
-\begin{textblock*}{10pt}(250pt,1pt)
-\small
+
+
+
+\begin{frame}{Oscillations With Multifrequencies}
+
+
+\begin{textblock*}{10pt}(280pt,-1pt)
+{\tiny
 \begin{equation*}
-  % The Pauli matrices form
-  %-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt)\sigma_1 + \frac{\alpha}{2}\sin(kt)\sigma_2
-  % The single matrix form
-   -\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \begin{pmatrix}
-    0 & e^{ikt}\\
-    e^{-ikt} & 0
-    \end{pmatrix}
+\alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
 \end{equation*}
+}
 \end{textblock*}
 
 
 
-\begin{columns}[T]
-\begin{column}{0.6\textwidth}
+\begin{equation*}
+    \vec {H} 
+    =  \omega_{\mathrm m}\begin{pmatrix}
+    0\\
+    0\\
+    1
+    \end{pmatrix} + \alpha \begin{pmatrix}
+    \sin (kx)\\
+    \cos(k x)\\
+    0
+    \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
+    \sin (kx)\\
+    - \cos(k x)\\
+    0
+    \end{pmatrix} $}
+\end{equation*}
 
-\begin{align*}
-    &-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt) \sigma_1 + \frac{\alpha}{2}\sin(kt) \sigma_2 \\
-= & \begin{pmatrix}
-\alpha \cos(kt) &
--\alpha \sin(kt) &
-\omega_0
-\end{pmatrix}
-\colorbox{blue!20}{$\begin{pmatrix}
--\sigma_1/2 \\
--\sigma_2/2 \\
--\sigma_3/2
-\end{pmatrix}
-$} \\
-=& \vec H \cdot (-\vec{\sigma}/2)
-\end{align*}
 
-\end{column}%
-\begin{column}{0.4\textwidth}
+
+    
+
+
+
+\begin{tcolorbox}
+Dropping off-resonance frequency: Requirement?
+\end{tcolorbox}
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Oscillations With Multifrequencies}
+
+\only<1>{
+\begin{equation*}
+    \vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m
+    \end{pmatrix} + \alpha_1\begin{pmatrix}
+     \cos(k_1x)\\
+    -\sin(k_1x)\\
+    0
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    \cos(k_2x)\\
+    -\sin(k_2x)\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+
+Corotating frame of the second frequency,
+
+
+
+\begin{equation*}
+    \vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+    \end{pmatrix} + \alpha_1\begin{pmatrix}
+     \cos(k_1-k_2x)\\
+    -\sin(k_1-K_2x)\\
+    0
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+
+}
+
+\only<1>{
+Energy gap in this frame becomes the length of the vector
+
+\begin{equation*}
+    \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+}
+
+\only<2->{
+Energy gap in this frame becomes the length of the vector
+\begin{equation*}
+\sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
+\end{equation*}
+
+Relative detuning
+
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+
+}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Oscillations With Multifrequencies}
+
+
+
+\begin{textblock*}{10pt}(220pt,16pt)
+\small
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+\end{textblock*}
+
+
+\vspace{2em}
+
+Two driving frequencies $k_1$, and $k_2$, with amplitude $\alpha_1$, and $\alpha_2$
+
+Destruction effect: $k_1 = \omega_{\mathrm m}$, $\lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}$
+
+
+
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\textwidth,trim={0 0.1cm 0 0.5cm},clip]{assets/rabi-osc-interferenes}
+% \end{figure}
+
+
+
+\end{frame}
+
+
+\begin{frame}{Oscillations With Multifrequencies}
+
+
 \begin{figure}
-    \centering
-    \includegraphics[width=\textwidth,trim={2cm 0 3cm 0},clip]{assets/rabi-bloch-vector-rotation}
+\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
+\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
+}
 \end{figure}
 
+% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
 
-\end{column}
-\end{columns}
-
-
-\begin{equation*}
-    D = \left\vert\frac{\omega_0 - k}{\alpha} \right\vert
-\end{equation*}
-
-is ratio of the energy gap in corotating frame to width of resonance.
+{\tiny
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
+    \hline
+       Dashed  &  dotted & dash-dotted & solid \\
+       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
+    \end{tabular}
+\end{center}
+}
 
 \end{frame}
 
 
-\begin{frame}{Interferences of Rabi Oscillations}
 
-\begin{textblock*}{10pt}(250pt,1pt)
-\small
+\begin{frame}{Rabi Formula Works}
+
+
+\begin{textblock*}{10pt}(230pt,-1pt)
+{\tiny
 \begin{equation*}
-  % The Pauli matrices form
-  %-\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \cos(kt)\sigma_1 + \frac{\alpha}{2}\sin(kt)\sigma_2
-  % The single matrix form
-   -\frac{\omega_0}{2} \sigma_3 - \frac{\alpha}{2} \begin{pmatrix}
-    0 & e^{ikt}\\
-    e^{-ikt} & 0
-    \end{pmatrix}
+\vec H \sim  \omega_{\mathrm m}\begin{pmatrix}
+    0\\
+    0\\
+    1
+    \end{pmatrix} + \alpha \begin{pmatrix}
+    \sin (kx)\\
+    \cos(k x)\\
+    0
+    \end{pmatrix} 
 \end{equation*}
+}
 \end{textblock*}
 
 
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency}
+%stimulated-neutrino-oscillations-kneller.png}
+\caption*{
+Lines: Rabi formula\\
+Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.
+}
+\end{figure}
+
+\begin{textblock*}{50pt}(220pt,50pt)
+
 \begin{align*}
-    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}A\cos(kx) $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}A \cos(kx)  \sigma_1\\
-    \to& -\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \cos(kx)\sigma_1 \\
-    =&-\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \frac{1}{2}\begin{pmatrix}
-    0 & e^{ikx}\\
-    e^{-ikx} & 0
-    \end{pmatrix}
-    - \frac{A\sin 2\theta_{\mathrm m}}{2} \frac{1}{2}\begin{pmatrix}
-    0 & e^{i(-k)x} \\
-    e^{-i(-k)x} & 0
-    \end{pmatrix}
+    \alpha_2 =& \alpha =\frac{A\sin 2\theta_{\mathrm m}}{2}     \\
+    \alpha_{2,\mathrm C} = & 2 \alpha    
 \end{align*}
 
+
+\end{textblock*}
+
 \end{frame}
+
 
 
 \begin{frame}{Parameters Used for Vacuum Oscillations}
@@ -2584,6 +2491,32 @@ Small perturbation $\Rightarrow$ Small $\hat A$ $\Rightarrow$ Large $\alpha$ $\R
 
 
 
+\begin{frame}{Single Frequency Matter Profile}
+
+
+\begin{tcolorbox}[title=Transition Probability]
+
+\begin{equation*}
+    P_{\mathrm{L\to H}}^{(n)} = \frac{  \left\lvert \hat B_{n}  \right\rvert^2 }{ \left\lvert  \hat B_{n}  \right\rvert^2 + ( n \hat k - 1 )^2  } \sin^2 \left( \frac{ q^{(n)} }{2} x \right)  ,
+\end{equation*}
+
+where
+
+\begin{align*}
+    q^{(n)} &= \sqrt{\left\lvert  \Gamma^{(n)} \right\rvert^2 + ( n \hat k - 1 )^2},\quad \text{frequency of oscillations} \\
+    \Gamma^{(n)} &= \left\lvert \hat B_{n} \right\rvert, \quad \text{width of resonance ($n\hat k$ as parameter)}
+\end{align*}
+
+
+\end{tcolorbox}
+
+Resonance conditions
+
+\begin{equation*}
+    \hat k \sim \frac{1}{n}
+\end{equation*}
+
+\end{frame}
 
 
 
