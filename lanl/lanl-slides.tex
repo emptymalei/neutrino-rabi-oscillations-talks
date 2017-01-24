@@ -1667,7 +1667,14 @@ Condition for interference to be important from high orders: width should be lar
 
 \begin{frame}{Single Frequency Matter Potential Revisited}
 
+\setbeamercovered{invisible}
 
+
+% \begin{textblock*}{100pt}(270pt,18pt)
+% \textblockcolour{white}
+% \small
+
+% \end{textblock*}
 
 
 Matter potential
@@ -1675,12 +1682,43 @@ Matter potential
     \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
 \end{equation*}
 
+Consider the resonance mode ($k=\omega_{\mathrm m}$) and one other mode
 
+\begin{equation*}
+\mathbf{\widetilde H}\sim -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \left( \begin{pmatrix}
+0 &  B_{1} e^{i   k x}\\
+  B_{1}^* e^{ -i   k x} & 0
+\end{pmatrix} + \begin{pmatrix}
+0 &  B_{n} e^{i   n k  x}\\
+  B_{n}^* e^{ -i   n k  x} & 0
+\end{pmatrix}\right)
+\end{equation*}
+
+
+\pause
+
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+
+\vspace{40pt}
+\begin{equation*}
+D' =  \left\vert \frac{B_2^2}{2 B_n(\omega_{\mathrm m}-n k)} \right\vert
+\end{equation*}
+
+\end{column}%
+\begin{column}{0.6\textwidth}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{assets/modified-relative-detuning-single-frequency}
+    \includegraphics[width=0.7\textwidth]{assets/modified-relative-detuning-single-frequency}
 \end{figure}
+
+\end{column}
+\end{columns}
+
+
+
+
 
 
 
