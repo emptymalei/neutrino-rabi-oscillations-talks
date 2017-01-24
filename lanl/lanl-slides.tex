@@ -459,10 +459,10 @@ Vacuum oscillation Hamiltonian
 \end{align*}
 
 \small
-Transition probability
+Electron flavor survival probability
 \vspace*{0pt}
 \begin{equation*}
-P = \frac{1}{2} - s_3    
+P = \frac{1}{2} + s_3 
 \end{equation*}
 
 
@@ -701,10 +701,10 @@ Energy gap:
     \lvert \vec H \rvert
 \end{equation*}
 
-Transition probability:
+Electron flavor survival probability
 
 \begin{equation*}
-P = \frac{1}{2} - s_3    
+P = \frac{1}{2} + s_3 
 \end{equation*}
 
 
@@ -893,7 +893,7 @@ Astrophysical environments: supernovae etc
 
 
 \begin{equation*}
-    \lambda(x) = \lambda_0 + \delta \lambda \cos(k x )
+    \lambda(x) = \lambda_0 + A \cos(k x )
 \end{equation*}
 
 
@@ -906,7 +906,9 @@ Astrophysical environments: supernovae etc
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \cos (k x)$  with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$}
+\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \cos (k x)$  
+%with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$
+}
 \end{figure}
 
 
@@ -1295,8 +1297,20 @@ We have been making approximations.
 
 
 \begin{align*}
-    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}A\cos(kx) $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}A \cos(kx)  \sigma_1\\
-    \to& -\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \cos(kx)\sigma_1 
+     \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
+    \to &  \omega_{\mathrm m}\begin{pmatrix}
+    0\\
+    0\\
+    1
+    \end{pmatrix} + \alpha \begin{pmatrix}
+    \cos (kx)\\
+    -\sin(k x)\\
+    0
+    \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
+    \cos (-kx)\\
+    -\sin( - k x)\\
+    0
+    \end{pmatrix} $}
 \end{align*}
 
 
@@ -1314,7 +1328,7 @@ We have been making approximations.
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
     \begin{equation*}
-    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
+    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\cos(kx)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\cos (kx)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
 \end{equation*}
 \end{tcolorbox}
 
@@ -1339,7 +1353,7 @@ Define Rabi basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} 
 where
 
 \begin{equation*}
-    \eta(x) - \eta(0) = \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\delta\lambda (\tau)} d\tau.
+    \eta(x) - \eta(0) = \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\cos(k \tau)} d\tau.
 \end{equation*}
 
 \end{tcolorbox}
@@ -1357,92 +1371,12 @@ where
 
 
 
-\begin{frame}{Single Frequency Matter Potential}
-
-
-Matter profile
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
-\end{equation*}
-
-
-Hamiltonian in new basis
-\begin{equation*}
-    \mathbf{\widetilde H} = - \frac{\omega_{\mathrm m}}{2}\sigma_3- \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} = - \frac{\omega_{\mathrm m}}{2}\sigma_3 + \begin{pmatrix}
-    0 & h \\
-    h^* & 0
-    \end{pmatrix}
-\end{equation*} 
-
-
-
-\begin{tcolorbox}[title=Hamiltonian in New Basis]
-
-\begin{align*}
-    h &\equiv -\frac{ {\color{red}\delta \lambda(x)}  }{2} e^{2i\eta(x)} \\
-    & = \frac{i}{4}\left[ \exp\left(ik x + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $}\right) \right. \\
-    &\phantom{=} \left. - \exp\left(-ik x + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right]
-\end{align*}
-
-
-\end{tcolorbox}
-%}
-
-
-
-\end{frame}
-
-
-
 
 
 
 
 \begin{frame}{Single Frequency Matter Potential}
-
-
-
-
-
-
-
-\begin{tcolorbox}[title=Off-diagonal Term in Our System]
-
-\begin{equation*}
-    \mathbf{\widetilde H}= - \frac{\omega_{\mathrm m}}{2}\sigma_3 + \begin{pmatrix}
-    0 & h \\
-    h^* & 0
-    \end{pmatrix}
-\end{equation*}
-
-\begin{align*}
-    h & \propto \left[ \exp\left(ik x + \colorbox{red!20}{$ i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right. \\
-    &\phantom{\propto} \left. - \exp\left(-ikx + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right]
-\end{align*}
-
-\end{tcolorbox}
-
-
-
-
-Jacobi-Anger expansion (Kneller et al, 2013)
-
-\begin{equation*}
-e^{i \beta \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(\beta) e^{i n k x},
-\end{equation*}
-
-where $J_n(\beta)$ are Bessel's functions of the first kind.
-
-
-
-
-\end{frame}
-
-
-
-
-\begin{frame}{Single Frequency Matter Potential}
-
+\setbeamercovered{invisible}
 
 
 
@@ -1453,8 +1387,8 @@ The off-diagonal element of Hamiltonian
 
 \begin{equation*}
 \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
-0 & \frac{1}{2}  B_n e^{i  {\color{blue} (n k) } x}\\
-\frac{1}{2}  B_n^* e^{ -i  {\color{blue} (n k) } x} & 0
+0 & \frac{1}{2}  B_n e^{i  {\color{red} (n k) } x}\\
+\frac{1}{2}  B_n^* e^{ -i  {\color{red} (n k) } x} & 0
 \end{pmatrix}
 \end{equation*}
 
@@ -1467,7 +1401,12 @@ where $B_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\m
 \end{tcolorbox}
 
 
+\pause
 
+\begin{tcolorbox}
+\centering
+Multiple potentials with different frequencies!
+\end{tcolorbox}
 
 
 
@@ -1475,6 +1414,7 @@ where $B_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\m
 \end{frame}
 
 
+\subsection{Rabi Oscillations With Multifrequencies}
 
 
 \begin{frame}{Rabi Oscillations With Multifrequencies}
@@ -1593,6 +1533,14 @@ Destruction effect: $k_1 = \omega_{\mathrm m}$,
 
 \begin{frame}{Rabi Oscillations With Multifrequencies}
 
+\begin{textblock*}{100pt}(240pt,18pt)
+\textblockcolour{white}
+\tiny
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+\end{textblock*}
+
 
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{assets/interference-reduction}
@@ -1650,9 +1598,9 @@ Condition for interference to be important from high orders: width should be lar
 \end{frame}
 
 
-\subsection{Multifrequency Matter Potential}
+%\subsection{Multifrequency Matter Potential}
 
-\begin{frame}{Castle Wall Matter Potential}
+\begin{frame}<presentation:0>[noframenumbering]{Castle Wall Matter Potential}
 
 
 
@@ -2502,6 +2450,89 @@ $E=1$MeV
 
 
 \end{frame}
+
+
+\begin{frame}{Single Frequency Matter Potential}
+
+
+Matter potential
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
+\end{equation*}
+
+
+Hamiltonian in new basis
+\begin{equation*}
+    \mathbf{\widetilde H} = - \frac{\omega_{\mathrm m}}{2}\sigma_3- \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} = - \frac{\omega_{\mathrm m}}{2}\sigma_3 + \begin{pmatrix}
+    0 & h \\
+    h^* & 0
+    \end{pmatrix}
+\end{equation*} 
+
+
+
+\begin{tcolorbox}[title=Hamiltonian in New Basis]
+
+\begin{align*}
+    h &\equiv -\frac{ {\color{red}\delta \lambda(x)}  }{2} e^{2i\eta(x)} \\
+    & = \frac{i}{4}\left[ \exp\left(ik x + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $}\right) \right. \\
+    &\phantom{=} \left. - \exp\left(-ik x + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right]
+\end{align*}
+
+
+\end{tcolorbox}
+%}
+
+
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{Single Frequency Matter Potential}
+
+
+
+
+
+
+
+\begin{tcolorbox}[title=Off-diagonal Term in Our System]
+
+\begin{equation*}
+    \mathbf{\widetilde H}= - \frac{\omega_{\mathrm m}}{2}\sigma_3 + \begin{pmatrix}
+    0 & h \\
+    h^* & 0
+    \end{pmatrix}
+\end{equation*}
+
+\begin{align*}
+    h & \propto \left[ \exp\left(ik x + \colorbox{red!20}{$ i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right. \\
+    &\phantom{\propto} \left. - \exp\left(-ikx + \colorbox{red!20}{$i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) $} \right) \right]
+\end{align*}
+
+\end{tcolorbox}
+
+
+
+
+Jacobi-Anger expansion (Kneller et al, 2013)
+
+\begin{equation*}
+e^{i \beta \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(\beta) e^{i n k x},
+\end{equation*}
+
+where $J_n(\beta)$ are Bessel's functions of the first kind.
+
+
+
+
+\end{frame}
+
 
 
 
