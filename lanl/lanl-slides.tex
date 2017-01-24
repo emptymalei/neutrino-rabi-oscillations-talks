@@ -1383,25 +1383,53 @@ where
 
 
 
-\begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
 
-The off-diagonal element of Hamiltonian
+% \begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
+
+% The Hamiltonian
+
+
+% \begin{equation*}
+% \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+% 0 & \frac{1}{2}  B_n e^{i  {\color{red} (n k) } x}\\
+% \frac{1}{2}  B_n^* e^{ -i  {\color{red} (n k) } x} & 0
+% \end{pmatrix}
+% \end{equation*}
+
+
+% where $B_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k ) /\omega_{\mathrm m}$.
+
+
+% \end{tcolorbox}
 
 
 \begin{equation*}
-\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
-0 & \frac{1}{2}  B_n e^{i  {\color{red} (n k) } x}\\
-\frac{1}{2}  B_n^* e^{ -i  {\color{red} (n k) } x} & 0
+\delta\lambda_N = \sum_{a=1}^N A_a \sin(k_a x + \phi_a)    
+\end{equation*}
+
+
+\begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
+
+
+\begin{equation*}
+\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \sum_{n_1=-\infty}^\infty \cdots \sum_{n_N=-\infty}^\infty \begin{pmatrix}
+0 &  B_{\{n_i\}} e^{i  {\color{red} \sum_a n_a k_a } x}\\
+  B_{\{n_i\}}^* e^{ -i  {\color{red} \sum_a n_a k_a } x} & 0
 \end{pmatrix}
 \end{equation*}
 
 
-where $B_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k ) /\omega_{\mathrm m}$.
+where 
+\begin{align*}
+    B_{\{n_i\}} &= -(-i)^{\sum_a n_a} \tan 2\theta_m \left( \sum_a n_a k_a \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right),\\
+    \Phi_{\{n_i\}} &= e^{i\left( \sum_a n_a \phi_a \right)}.
+\end{align*}
 
 
 
 
 \end{tcolorbox}
+
 
 
 \pause
@@ -1651,7 +1679,7 @@ Matter potential
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{assets/modified-relative-detuning-single-frequency}
+    \includegraphics[width=0.5\textwidth]{assets/modified-relative-detuning-single-frequency}
 \end{figure}
 
 
