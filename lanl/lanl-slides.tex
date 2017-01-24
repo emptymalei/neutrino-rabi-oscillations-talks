@@ -325,13 +325,10 @@ UNM}
 \everymath{\displaystyle}
 
 
+\begin{frame}{Why Do Neutrinos Oscillate?}
 
-\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
-\setbeamercovered{invisible}
+Flavor states are different from mass states (eigen energy states).
 
-
-\begin{textblock*}{10pt}(225pt,1pt)
-\small
 \begin{equation*}
 \begin{pmatrix}
 \psi_e\\
@@ -344,8 +341,16 @@ UNM}
 \psi_2
 \end{pmatrix}
 \end{equation*}
+    
+\end{frame}
 
-\end{textblock*}
+
+
+\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
+\setbeamercovered{invisible}
+
+
+
 
 
 \begin{tcolorbox}[title=Equation of Motion]
@@ -393,6 +398,7 @@ i\partial_x \begin{pmatrix}
 
 \begin{frame}{Flavor Isospin}
 \setbeamercovered{invisible}
+
 
 
 
@@ -452,6 +458,13 @@ Vacuum oscillation Hamiltonian
 \end{pmatrix}
 \end{align*}
 
+\small
+Transition probability
+\vspace*{0pt}
+\begin{equation*}
+P = \frac{1}{2} - s_3    
+\end{equation*}
+
 
 \end{column}%
 \begin{column}{0.5\textwidth}
@@ -462,6 +475,7 @@ Vacuum oscillation Hamiltonian
     \vspace*{-20pt}
     \includegraphics[width=0.7\textwidth]{assets/flavor-isospin-1}
 \end{figure}
+
 
 
 
@@ -650,7 +664,7 @@ and $e^{-}$, quarks etc.}
     0\\
     - \lambda(x)
     \end{pmatrix} $} \\
-    \to &  \colorbox{blue!20}{$ \vec H_{\mathrm v} $}  \colorbox{red!20}{$ + \vec H_{\mathrm m}(x) $}
+    = &  \colorbox{blue!20}{$ \vec H_{\mathrm v} $}  \colorbox{red!20}{$ + \vec H_{\mathrm m}(x) $}
 \end{align*}
 
 
@@ -664,21 +678,16 @@ and $e^{-}$, quarks etc.}
 
 \begin{frame}{MSW Effect}
 
-
 \only<1>{
+
 
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
-\begin{textblock*}{70pt}(50pt,250pt)
-\small
-Large density
-\end{textblock*}
-
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.4\textwidth]{assets/matter-effect-large-density}
+    \includegraphics[width=0.9\textwidth]{assets/matter-effect-notsolarge-density}
 \end{figure}
 
 
@@ -686,10 +695,75 @@ Large density
 \begin{column}{0.5\textwidth}
 
 
+Energy gap: 
+
+\begin{equation*}
+    \lvert \vec H \rvert
+\end{equation*}
+
+Transition probability:
+
+\begin{equation*}
+P = \frac{1}{2} - s_3    
+\end{equation*}
+
+
+
+\end{column}
+\end{columns}
+
+
+}
+
+\only<2>{
+
+\centering
+
+Adiabatic matter density change
+
+\begin{columns}[T]
+\begin{column}{0.33\textwidth}
+
+\begin{textblock*}{70pt}(50pt,250pt)
+\small
+Large density
+\end{textblock*}
+
+
+
+\begin{textblock*}{70pt}(280pt,250pt)
+\small
+Low density
+\end{textblock*}
+
+
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{assets/matter-effect-notsolarge-density}
+    \includegraphics[width=0.7\textwidth]{assets/matter-effect-large-density}
+\end{figure}
+
+
+\end{column}%
+\begin{column}{0.33\textwidth}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/matter-effect-adiabatic}
+\end{figure}
+
+
+
+\end{column}
+\begin{column}{0.33\textwidth}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/matter-effect-adiabatic-3}
 \end{figure}
 
 
@@ -699,16 +773,12 @@ Large density
 
 }
 
-\only<2> {
+\only<3> {
 
 
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
-\begin{textblock*}{70pt}(50pt,250pt)
-\small
-MSW Resonance
-\end{textblock*}
 
 \begin{figure}
     \centering
@@ -720,17 +790,22 @@ MSW Resonance
 \begin{column}{0.5\textwidth}
 
 
-\begin{textblock*}{70pt}(250pt,250pt)
-\small
-Low density
-\end{textblock*}
+
+\begin{itemize}
+
+\item 
+MSW Resonance    
+\item 
+Maximum possible flavor transition probability amplitude
+\item
+A specific matter density
+\end{itemize}
 
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/matter-effect-small-density}
-\end{figure}
+
+
+
 
 
 
@@ -812,37 +887,20 @@ Astrophysical environments: supernovae etc
 \begin{frame}{Stimulated Neutrino Flavor Conversions}
 
 
-\only<1-1>{
 
-\begin{textblock*}{10pt}(280pt,1pt)
-\small
+
+
+
+
 \begin{equation*}
-\lambda(x) =\sqrt{2}G_{\mathrm F}n_e    
+    \lambda(x) = \lambda_0 + \delta \lambda \cos(k x )
 \end{equation*}
 
-\end{textblock*}
 
 
 
 
-\begin{tcolorbox}[title=Matter Profile]
-\begin{align*}
-    &n_e(x) = n_0 + \delta n \cos(k x) \\
-    \Rightarrow & \lambda(x) = \lambda_0 + \delta \lambda \cos(k x )
-\end{align*}
-\end{tcolorbox}
 
-}
-
-\only<2-2>{
-
-% \begin{tcolorbox}
-% Kneller, J. P., McLaughlin, G. C., \& Patton, K. M. (2013). J. Phys. G: Nucl. Part. Phys. {\bf{40}} (2013) 055002.
-% \end{tcolorbox}
-
-\begin{tcolorbox}
-P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (2014);
-\end{tcolorbox}
 
 
 \begin{figure}
@@ -852,6 +910,8 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 \end{figure}
 
 
+{\small
+P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (2014);
 }
 
 
@@ -930,6 +990,9 @@ Hamiltonian
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
+\centering
+Static Frame
+
 \begin{equation*}
     \vec H_3 = \omega_{\mathrm m}\begin{pmatrix}
     0 \\
@@ -945,6 +1008,9 @@ Hamiltonian
 
 \end{column}%
 \begin{column}{0.5\textwidth}
+
+\centering
+Corotating Frame
 
 \begin{equation*}
     \vec H'_3 = (\omega_{\mathrm m} - k)\begin{pmatrix}
@@ -1000,13 +1066,16 @@ Hamiltonian
 
 \only<3>{
 
+\centering
+Corotating Frame
+
 
 \begin{equation*}
     \vec H'_3 = (\omega_{\mathrm m} - k)\begin{pmatrix}
     0 \\
     0\\
     1
-    \end{pmatrix} = 0
+    \end{pmatrix} = 0 \Rightarrow k=\omega_{\mathrm m}
 \end{equation*}
 
 
@@ -1139,7 +1208,7 @@ Background matter basis (eigen energy basis):
 \begin{textblock*}{10pt}(240pt,1pt)
 \small
 \begin{equation*}
-\alpha = \frac{\sin2\theta_{\mathrm m}}{2}
+\alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
 \end{equation*}
 
 \end{textblock*}
@@ -1374,38 +1443,23 @@ where $J_n(\beta)$ are Bessel's functions of the first kind.
 
 \begin{frame}{Single Frequency Matter Potential}
 
-\only<1-1>{
-\begin{tcolorbox}[title=Scaled Quantities]
-Characteristic scale: $\omega_{\mathrm{m}}$
 
 
 
-\begin{itemize}
-\item $\hat A = A/\omega_{\mathrm{m}}$
-    \item $\hat k = k/\omega_{\mathrm{m}}$
-    \item $\hat x = \omega_{\mathrm{m}} x$
-    \item $\hat h= h/\omega_{\mathrm{m}}$
-\end{itemize}
-\end{tcolorbox}
-}
-
-
-
-\only<2-2>{
-\begin{tcolorbox}[title=Rotation Wave Approximation]
+\begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
 
 The off-diagonal element of Hamiltonian
 
 
 \begin{equation*}
 \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
-0 & \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k) } \hat x}\\
-\frac{1}{2} \hat B_n^* e^{ -i  {\color{blue} (n\hat k) } \hat x} & 0
+0 & \frac{1}{2}  B_n e^{i  {\color{blue} (n k) } x}\\
+\frac{1}{2}  B_n^* e^{ -i  {\color{blue} (n k) } x} & 0
 \end{pmatrix}
 \end{equation*}
 
 
-where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \cos 2\theta_{\mathrm{m}} / \hat k ) $.
+where $B_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k ) /\omega_{\mathrm m}$.
 
 
 
@@ -1414,7 +1468,7 @@ where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \c
 
 
 
-}
+
 
 
 
@@ -1453,7 +1507,7 @@ Corotating frame of the second frequency,
     \omega_m - k_2
     \end{pmatrix} + \alpha_1\begin{pmatrix}
      \cos(k_1-k_2x)\\
-    -\sin(k_1-K_2x)\\
+    -\sin(k_1-k_2x)\\
     0
     \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
     1\\
@@ -1566,7 +1620,7 @@ Destruction effect: $k_1 = \omega_{\mathrm m}$,
 
 
 
-\begin{frame}{Single Frequency Matter Potential}
+\begin{frame}<presentation:0>[noframenumbering]{Single Frequency Matter Potential}
 
 
 
@@ -1656,7 +1710,7 @@ MSW resonance: matter potential cancels out the vacuum diagonal elements of the 
 Stimulated oscillations: variation in matter profile can cause resonances.
 
 \item
-Oscillations with two driving fields of different frequencies: large width to destroy the resonance.
+Oscillations with two driving fields of different frequencies: large potential to destroy the resonance.
 \end{enumerate}
 
 \end{column}
@@ -1674,6 +1728,31 @@ Oscillations with two driving fields of different frequencies: large width to de
     \centering
     \includegraphics[width=0.9\textwidth]{assets/matter-effect-critical-density}
 \end{figure}
+}
+
+\only<3>{
+For matter potential
+
+\begin{equation*}
+\lambda(x) = \lambda_0 + A\cos(k x),    
+\end{equation*}
+
+Resonance condition
+
+\begin{equation*}
+    n k = \omega_{\mathrm m}
+\end{equation*}
+
+}
+
+\only<4>{
+
+
+\begin{equation*}
+\lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}    
+\end{equation*}
+
+
 }
 
 \end{column}
