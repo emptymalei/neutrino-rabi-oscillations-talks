@@ -906,9 +906,9 @@ Astrophysical environments: supernovae etc
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \cos (k x)$  
+%\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \cos (k x)$  
 %with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$
-}
+%}
 \end{figure}
 
 
@@ -1404,7 +1404,7 @@ where
 
 
 \begin{equation*}
-\delta\lambda_N = \sum_{a=1}^N A_a \sin(k_a x + \phi_a)    
+\lambda(x) = \lambda_0 + \sum_{a=1}^N A_a \sin(k_a x ) 
 \end{equation*}
 
 
@@ -1413,16 +1413,16 @@ where
 
 \begin{equation*}
 \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \sum_{n_1=-\infty}^\infty \cdots \sum_{n_N=-\infty}^\infty \begin{pmatrix}
-0 &  B_{\{n_i\}} e^{i  {\color{red} \sum_a n_a k_a } x}\\
-  B_{\{n_i\}}^* e^{ -i  {\color{red} \sum_a n_a k_a } x} & 0
+0 &  B_{\{n_a\}} e^{i  {\color{red} \sum_a n_a k_a } x}\\
+  B_{\{n_a\}}^* e^{ -i  {\color{red} \sum_a n_a k_a } x} & 0
 \end{pmatrix}
 \end{equation*}
 
 
 where 
 \begin{align*}
-    B_{\{n_i\}} &= -(-i)^{\sum_a n_a} \tan 2\theta_m \left( \sum_a n_a k_a \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right),\\
-    \Phi_{\{n_i\}} &= e^{i\left( \sum_a n_a \phi_a \right)}.
+    B_{\{n_a\}} &= -(-i)^{\sum_a n_a} \tan 2\theta_m \left( \sum_a n_a k_a \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right)
+    %\Phi_{\{n_a\}} &= e^{i\left( \sum_a n_a \phi_a \right)}.
 \end{align*}
 
 
