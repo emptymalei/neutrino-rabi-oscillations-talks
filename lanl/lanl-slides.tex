@@ -1287,7 +1287,7 @@ Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\t
 
 
 
-\section{Single Frequency Matter Potential Revisited}
+\section{Single Frequency Matter Potential Decomposed}
 
 
 
@@ -1328,7 +1328,7 @@ We have been making approximations.
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
     \begin{equation*}
-    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\cos(kx)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\cos (kx)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
+    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}A\cos(kx)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}A\cos (kx)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
 \end{equation*}
 \end{tcolorbox}
 
@@ -1336,7 +1336,10 @@ We have been making approximations.
 \begin{tcolorbox}[title=A Better Basis]
 
 
-Define Rabi basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} in which the wave function is related to wave function in background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
+Define Rabi basis %\{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} 
+in which the wave function is related to wave function in background matter basis 
+%\{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\}
+through
 
 \begin{equation*}
     \begin{pmatrix}
@@ -1353,7 +1356,7 @@ Define Rabi basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} 
 where
 
 \begin{equation*}
-    \eta(x) - \eta(0) = \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\cos(k \tau)} d\tau.
+    \eta(x) - \eta(0) = \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}A\cos(k \tau)} d\tau.
 \end{equation*}
 
 \end{tcolorbox}
@@ -1414,10 +1417,10 @@ Multiple potentials with different frequencies!
 \end{frame}
 
 
-\subsection{Rabi Oscillations With Multifrequencies}
+\subsection{Rabi Oscillations With Multiple Potentials}
 
 
-\begin{frame}{Rabi Oscillations With Multifrequencies}
+\begin{frame}{Rabi Oscillations With Multiple Potentials}
 
 \only<1>{
 \begin{equation*}
@@ -1436,7 +1439,7 @@ Multiple potentials with different frequencies!
     \end{pmatrix}$}
 \end{equation*}
 
-Corotating frame of the second frequency,
+Corotating frame of the second potential,
 
 
 
@@ -1493,7 +1496,7 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 
 
-\begin{frame}{Rabi Oscillations With Multifrequencies}
+\begin{frame}{Rabi Oscillations With Multiple Potentials}
 
 
 
@@ -1531,7 +1534,7 @@ Destruction effect: $k_1 = \omega_{\mathrm m}$,
 \end{frame}
 
 
-\begin{frame}{Rabi Oscillations With Multifrequencies}
+\begin{frame}{Rabi Oscillations With Multiple Potentials}
 
 \begin{textblock*}{100pt}(240pt,18pt)
 \textblockcolour{white}
@@ -1634,6 +1637,29 @@ Condition for interference to be important from high orders: width should be lar
 \end{frame}
 
 
+\begin{frame}{Single Frequency Matter Potential Revisited}
+
+
+
+
+Matter potential
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
+\end{equation*}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/modified-relative-detuning-single-frequency}
+\end{figure}
+
+
+
+
+
+    
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2215,183 +2241,9 @@ and $\mathbf d$ is the dipole moment.
 
 
 
-\begin{frame}{Oscillations With Multifrequencies}
-
-
-\begin{textblock*}{10pt}(280pt,-1pt)
-{\tiny
-\begin{equation*}
-\alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
-\end{equation*}
-}
-\end{textblock*}
 
 
 
-\begin{equation*}
-    \vec {H} 
-    =  \omega_{\mathrm m}\begin{pmatrix}
-    0\\
-    0\\
-    1
-    \end{pmatrix} + \alpha \begin{pmatrix}
-    \sin (kx)\\
-    \cos(k x)\\
-    0
-    \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
-    \sin (kx)\\
-    - \cos(k x)\\
-    0
-    \end{pmatrix} $}
-\end{equation*}
-
-
-
-    
-
-
-
-\begin{tcolorbox}
-Dropping off-resonance frequency: Requirement?
-\end{tcolorbox}
-
-
-\end{frame}
-
-
-
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-\only<1>{
-\begin{equation*}
-    \vec H = \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m
-    \end{pmatrix} + \alpha_1\begin{pmatrix}
-     \cos(k_1x)\\
-    -\sin(k_1x)\\
-    0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
-    \cos(k_2x)\\
-    -\sin(k_2x)\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-
-Corotating frame of the second frequency,
-
-
-
-\begin{equation*}
-    \vec H = \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m - k_2
-    \end{pmatrix} + \alpha_1\begin{pmatrix}
-     \cos(k_1-k_2x)\\
-    -\sin(k_1-K_2x)\\
-    0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
-    1\\
-    0\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-
-}
-
-\only<1>{
-Energy gap in this frame becomes the length of the vector
-
-\begin{equation*}
-    \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m - k_2
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
-    1\\
-    0\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-}
-
-\only<2->{
-Energy gap in this frame becomes the length of the vector
-\begin{equation*}
-\sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
-\end{equation*}
-
-Relative detuning
-
-\begin{equation*}
-D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
-\end{equation*}
-
-}
-
-\end{frame}
-
-
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-
-
-\begin{textblock*}{10pt}(220pt,16pt)
-\small
-\begin{equation*}
-D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
-\end{equation*}
-\end{textblock*}
-
-
-\vspace{2em}
-
-Two driving frequencies $k_1$, and $k_2$, with amplitude $\alpha_1$, and $\alpha_2$
-
-Destruction effect: $k_1 = \omega_{\mathrm m}$, $\lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}$
-
-
-
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=\textwidth,trim={0 0.1cm 0 0.5cm},clip]{assets/rabi-osc-interferenes}
-% \end{figure}
-
-
-
-\end{frame}
-
-
-\begin{frame}{Oscillations With Multifrequencies}
-
-
-\begin{figure}
-\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
-\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
-}
-\end{figure}
-
-% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
-
-{\tiny
-\begin{center}
-    \begin{tabular}{c|c|c|c}
-    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
-    \hline
-       Dashed  &  dotted & dash-dotted & solid \\
-       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
-    \end{tabular}
-\end{center}
-}
-
-\end{frame}
 
 
 
