@@ -423,6 +423,14 @@ Equation of motion
 \end{equation*}
 
 
+\small
+Electron flavor survival probability
+\vspace*{0pt}
+\begin{equation*}
+P = \frac{1}{2} + s_3 
+\end{equation*}
+
+
 \end{column}%
 \begin{column}{0.5\textwidth}
 
@@ -442,7 +450,7 @@ Equation of motion
 
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
-
+\vspace{10pt}
 Vacuum oscillation Hamiltonian
 
 \begin{align*}
@@ -458,12 +466,6 @@ Vacuum oscillation Hamiltonian
 \end{pmatrix}
 \end{align*}
 
-\small
-Electron flavor survival probability
-\vspace*{0pt}
-\begin{equation*}
-P = \frac{1}{2} + s_3 
-\end{equation*}
 
 
 \end{column}%
@@ -702,10 +704,10 @@ Electron flavor survival probability
 P = \frac{1}{2} + s_3 
 \end{equation*}
 
-Energy gap: 
+Oscillation frequency in matter: 
 
 \begin{equation*}
-    \lvert \vec H \rvert
+    \omega_{\mathrm m} = \lvert \vec H \rvert
 \end{equation*}
 
 
@@ -792,11 +794,10 @@ Low density
 
 
 \begin{itemize}
-
-\item 
-MSW Resonance    
 \item 
 Maximum possible flavor transition probability amplitude
+\item 
+MSW Resonance    
 \item
 A specific matter density
 \end{itemize}
@@ -862,7 +863,7 @@ Astrophysical environments: supernovae etc
 \begin{figure}
     \centering
     \includegraphics[height=0.5\textheight]{assets/supernova-shock-turbulence.png}
-    \caption*{Supernova shock and turbulence. E. Borriello, et al  (2014)}
+    \caption*{Turbulence in supernova. E. Borriello, et al  (2014)}
     %https://inspirehep.net/record/1262293?ln=en
     % arXiv: 1310.7488
 \end{figure}
@@ -953,7 +954,7 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 
 
  
-\only<1,4>{
+\only<1,5>{
   
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
@@ -985,12 +986,12 @@ Hamiltonian
 }
 
 
-\only<2>{
+\only<2-3>{
 
 
 
 \begin{columns}[T]
-\begin{column}{0.5\textwidth}
+\begin{column}<2-3>{0.5\textwidth}
 
 \centering
 Static Frame
@@ -1007,9 +1008,14 @@ Static Frame
     \end{pmatrix}
 \end{equation*}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/rabi-isospin-static-frame}
+\end{figure}
+
 
 \end{column}%
-\begin{column}{0.5\textwidth}
+\begin{column}<3>{0.5\textwidth}
 
 \centering
 Corotating Frame
@@ -1026,34 +1032,6 @@ Corotating Frame
     \end{pmatrix}
 \end{equation*}
 
-
-
-
-
-\end{column}
-\end{columns}
-
-
-}
-
-\only<2>{
-
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-
-
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{assets/rabi-isospin-static-frame}
-\end{figure}
-
-\end{column}%
-\begin{column}{0.5\textwidth}
-
-
-
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{assets/rabi-isospin-rotating-frame}
@@ -1061,12 +1039,18 @@ Corotating Frame
 
 
 
+
+
 \end{column}
 \end{columns}
 
+
 }
 
-\only<3>{
+
+
+
+\only<4>{
 
 \centering
 Corotating Frame
@@ -1091,7 +1075,7 @@ Corotating Frame
 
 
 
-\only<4>{
+\only<5>{
 
 
 
@@ -1110,7 +1094,7 @@ Relative detuning
 Rabi frequency
 
 \begin{equation*}
-\Omega_{\mathrm R} = \sqrt{\colorbox{red!20}{$\alpha$}^2+(\colorbox{blue!20}{$\omega_{\mathrm m} - k$})^2}    
+\Omega_{\mathrm R} = \lvert\alpha\rvert\sqrt{1+ D^2}    
 \end{equation*}
 
 
@@ -1123,18 +1107,18 @@ Rabi frequency
 
 
 
-\begin{frame}{Rabi Oscillations}
+% \begin{frame}{Rabi Oscillations}
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/rabi-resonance.png}
-    \caption*{Amplitude of Rabi oscillations for different driving field frequency $k$}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{assets/rabi-resonance.png}
+%     \caption*{Amplitude of Rabi oscillations for different driving field frequency $k$}
+% \end{figure}
 
 
 
-\end{frame}
+% \end{frame}
 
 
 
