@@ -327,7 +327,7 @@ UNM}
 
 \begin{frame}{Why Do Neutrinos Oscillate?}
 
-Flavor states are different from mass states (eigen energy states).
+Flavor states are different from mass states.
 
 \begin{equation*}
 \begin{pmatrix}
@@ -1160,7 +1160,7 @@ Rabi frequency
 
 \begin{tcolorbox}[title=Basis]
 
-Background matter basis (eigen energy basis): 
+Background matter basis: 
 
 
 \begin{equation*}
@@ -1260,7 +1260,7 @@ Matter potential frequency
 %stimulated-neutrino-oscillations-kneller.png}
 \caption*{
 Lines: Rabi formula\\
-Dots, diamonds, triangles, and squares are for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.
+Dots, diamonds, triangles, and squares are {\bf full solutions without approximations} for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.
 }
 \end{figure}
 
@@ -1367,52 +1367,30 @@ where
 
 
 
-
-% \begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
-
-% The Hamiltonian
-
-
-% \begin{equation*}
-% \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
-% 0 & \frac{1}{2}  B_n e^{i  {\color{red} (n k) } x}\\
-% \frac{1}{2}  B_n^* e^{ -i  {\color{red} (n k) } x} & 0
-% \end{pmatrix}
-% \end{equation*}
-
-
-% where $B_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k ) /\omega_{\mathrm m}$.
-
-
-% \end{tcolorbox}
-
-
 \begin{equation*}
-\lambda(x) = \lambda_0 + \sum_{a=1}^N A_a \sin(k_a x ) 
+\lambda(x) = \lambda_0 +  A \sin(k x ) 
 \end{equation*}
 
 
 \begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
 
+The Hamiltonian
+
 
 \begin{equation*}
-\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \sum_{n_1=-\infty}^\infty \cdots \sum_{n_N=-\infty}^\infty \begin{pmatrix}
-0 &  B_{\{n_a\}} e^{i  {\color{red} \sum_a n_a k_a } x}\\
-  B_{\{n_a\}}^* e^{ -i  {\color{red} \sum_a n_a k_a } x} & 0
+\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+0 & \frac{1}{2}  \alpha_n e^{i  {\color{red} (n k) } x}\\
+\frac{1}{2}  \alpha_n^* e^{ -i  {\color{red} (n k) } x} & 0
 \end{pmatrix}
 \end{equation*}
 
 
-where 
-\begin{align*}
-    B_{\{n_a\}} &= -(-i)^{\sum_a n_a} \tan 2\theta_m \left( \sum_a n_a k_a \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right)
-    %\Phi_{\{n_a\}} &= e^{i\left( \sum_a n_a \phi_a \right)}.
-\end{align*}
-
-
+where $\alpha_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k )$.
 
 
 \end{tcolorbox}
+
+
 
 
 
@@ -1490,10 +1468,11 @@ Energy gap in this frame becomes the length of the vector
 }
 
 \only<2->{
-Energy gap in this frame becomes the length of the vector
-\begin{equation*}
-\sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
-\end{equation*}
+
+% Energy gap in this frame becomes the length of the vector
+% \begin{equation*}
+% \sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
+% \end{equation*}
 
 Relative detuning
 
@@ -1521,7 +1500,7 @@ D' =  \left\vert \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\ver
 Amplitude reduces from 1 to 1/2 if
 
 \begin{equation*}
-    D'=1.
+    D'=1 \Rightarrow \alpha_{2,\mathrm C} \equiv \sqrt{ 2 \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }.
 \end{equation*}
 
 
@@ -1530,10 +1509,10 @@ Amplitude reduces from 1 to 1/2 if
 \begin{tcolorbox}
 Two driving frequencies $k_1$, and $k_2$, with amplitude $\alpha_1$, and $\alpha_2$
 
-Destruction effect: $k_1 = \omega_{\mathrm m}$, 
+For $k_1 = \omega_{\mathrm m}$, survival of resonance requires
 
 \begin{equation*}
-    \lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}
+    \lvert \alpha_2\rvert \ll  \alpha_{2,\mathrm C}\equiv\sqrt{ 2 \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }
 \end{equation*}
 
 \end{tcolorbox}
@@ -1583,17 +1562,142 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 
 
-\begin{frame}<presentation:0>[noframenumbering]{Single Frequency Matter Potential}
 
 
+
+
+
+
+\begin{frame}{Single Frequency Matter Potential Revisited}
+
+\setbeamercovered{invisible}
+
+
+
+
+Matter potential
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
+\end{equation*}
+
+Consider the resonance condition ($k=\omega_{\mathrm m}$) 
+
+\only<1>{
+\begin{equation*}
+\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+0 & \frac{1}{2}  \alpha_n e^{i  {\color{red} (n k) } x}\\
+\frac{1}{2}  \alpha_n^* e^{ -i  {\color{red} (n k) } x} & 0
+\end{pmatrix}
+\end{equation*}
+}
+
+\only<2>{
+
+
+\begin{equation*}
+\mathbf{\widetilde H}\sim -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2}  \begin{pmatrix}
+0 &  \alpha_{1} e^{i   k x}\\
+  \alpha_{1}^* e^{ -i   k x} & 0
+\end{pmatrix} +  \frac{1}{2}\begin{pmatrix}
+0 &  \alpha_{n} e^{i   n k  x}\\
+  \alpha_{n}^* e^{ -i   n k  x} & 0
+\end{pmatrix}
+\end{equation*}
+}
+
+\pause
+
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+
+\vspace{40pt}
+\begin{equation*}
+D' =  \left\vert \frac{\alpha_2^2}{2 \alpha_n(\omega_{\mathrm m}-n k)} \right\vert
+\end{equation*}
+
+\end{column}%
+\begin{column}{0.6\textwidth}
+
+\begin{table}
+%\caption{$k=\omega_{\mathrm m}$}
+\begin{tabular}{ c  c }
+\multicolumn{2}{c}{$k=\omega_{\mathrm m}$} \\
+\hline\hline
+$n$ & $D'$ \\
+\hline
+-1 & $4.8\times 10^{-6}$ \\
+2 & $2.1\times 10^{-14}$ \\
+-2 & $6.9\times 10^{-15}$
+\end{tabular}
+%\caption{Triathlon results}
+\end{table}
+
+
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{assets/modified-relative-detuning-single-frequency}
+% \end{figure}
+
+\end{column}
+\end{columns}
+
+
+
+    
+\end{frame}
+
+
+
+
+
+\begin{frame}{Single Frequency Matter Potential Revisited}
+\setbeamercovered{invisible}
+
+Width 
+
+\begin{equation*}
+\alpha_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k )
+\end{equation*}
+
+
+
+
+\begin{tcolorbox}
+
+\begin{equation*}
+    \lvert \alpha_n \rvert \propto  \sqrt{\frac{n}{2\pi}} \left( \frac{ e A\cos 2\theta_{\mathrm m} }{2 n k} \right)^n  , \quad \text{for large } n
+\end{equation*}
+
+\end{tcolorbox}
+
+
+% \pause
+
+\begin{tcolorbox}
+{\bf Width} drops fast at large $n$.\\
+But the critical value for each mode becomes larger for large $n$'s
+\begin{equation*}
+    \alpha_{n,\mathrm C}\equiv\sqrt{ 2 \lvert \alpha_1 (n k - \omega_{\mathrm m}) \rvert }
+\end{equation*}
+\end{tcolorbox}
+
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Single Frequency Matter Potential}
 
 
 \only<1->{
 
 \begin{figure}
 \centering
-\includegraphics[width=0.95\textwidth]{assets/stimulated-single-frequency-resonances-k-orders.png}
-\caption*{Resonances of different $n = 1/\hat k$. Width becomes extremely narrow for high orders.}
+\includegraphics[width=0.95\textwidth]{assets/width-n}
+\caption*{Width of different modes}
 \end{figure}
 
 }
@@ -1601,7 +1705,7 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 \only<2->{
 \begin{textblock*}{300pt}(40pt,100pt)
 \begin{tcolorbox}
-Condition for interference to be important from high orders: width should be larger than a critical value.
+Higher modes are less important
 \end{tcolorbox}
 \end{textblock*}
 }
@@ -1611,6 +1715,47 @@ Condition for interference to be important from high orders: width should be lar
 
 
 \end{frame}
+
+
+
+\begin{frame}{Multiple Frequencies in Matter Potential}
+\setbeamercovered{invisible}
+
+
+
+
+\begin{equation*}
+\lambda(x) = \lambda_0 + \sum_{a=1}^N A_a \sin(k_a x ) 
+\end{equation*}
+
+
+\begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
+
+
+\begin{equation*}
+\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \sum_{n_1=-\infty}^\infty \cdots \sum_{n_N=-\infty}^\infty \begin{pmatrix}
+0 &  B_{\{n_a\}} e^{i  {\color{red} \sum_a n_a k_a } x}\\
+  B_{\{n_a\}}^* e^{ -i  {\color{red} \sum_a n_a k_a } x} & 0
+\end{pmatrix}
+\end{equation*}
+
+
+where 
+\begin{align*}
+    B_{\{n_a\}} &= -(-i)^{\sum_a n_a} \tan 2\theta_m \left( \sum_a n_a k_a \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right)
+    %\Phi_{\{n_a\}} &= e^{i\left( \sum_a n_a \phi_a \right)}.
+\end{align*}
+
+
+
+
+\end{tcolorbox}
+
+
+
+
+\end{frame}
+
 
 
 %\subsection{Multifrequency Matter Potential}
@@ -1636,7 +1781,7 @@ Condition for interference to be important from high orders: width should be lar
 
 \begin{figure}
         \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
-    % \caption{Transition probilities}
+    % \caption{Transition probabilities}
 \end{figure}
 
 
@@ -1646,69 +1791,6 @@ Condition for interference to be important from high orders: width should be lar
 
 
 
-\end{frame}
-
-
-\begin{frame}{Single Frequency Matter Potential Revisited}
-
-\setbeamercovered{invisible}
-
-
-% \begin{textblock*}{100pt}(270pt,18pt)
-% \textblockcolour{white}
-% \small
-
-% \end{textblock*}
-
-
-Matter potential
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
-\end{equation*}
-
-Consider the resonance mode ($k=\omega_{\mathrm m}$) and one other mode
-
-\begin{equation*}
-\mathbf{\widetilde H}\sim -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \left( \begin{pmatrix}
-0 &  B_{1} e^{i   k x}\\
-  B_{1}^* e^{ -i   k x} & 0
-\end{pmatrix} + \begin{pmatrix}
-0 &  B_{n} e^{i   n k  x}\\
-  B_{n}^* e^{ -i   n k  x} & 0
-\end{pmatrix}\right)
-\end{equation*}
-
-
-\pause
-
-\begin{columns}[T]
-\begin{column}{0.4\textwidth}
-
-\vspace{40pt}
-\begin{equation*}
-D' =  \left\vert \frac{B_2^2}{2 B_n(\omega_{\mathrm m}-n k)} \right\vert
-\end{equation*}
-
-\end{column}%
-\begin{column}{0.6\textwidth}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.7\textwidth]{assets/modified-relative-detuning-single-frequency}
-\end{figure}
-
-\end{column}
-\end{columns}
-
-
-
-
-
-
-
-
-
-    
 \end{frame}
 
 
@@ -1773,7 +1855,7 @@ Resonance condition
 
 
 \begin{equation*}
-\lvert \alpha_2\rvert \gg \sqrt{ 2\omega_{\mathrm m} \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }\equiv \alpha_{2,\mathrm C}    
+\lvert \alpha_2\rvert \gg \alpha_{2,\mathrm C} \equiv \sqrt{ 2 \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }   
 \end{equation*}
 
 
@@ -2438,39 +2520,6 @@ where $J_n(\beta)$ are Bessel's functions of the first kind.
 
 
 
-\begin{frame}{Single Frequency Matter Profile}
-
-
-\only<1-1>{
-
-\begin{tcolorbox}[title=Why Does It Work?]
-
-\begin{equation*}
-    J_n(n \sech \alpha) \sim \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi n \tanh \alpha } }, \quad \text{for large } n
-\end{equation*}
-
-% Hamiltonian off-diagonal element amplitude
-
-% \begin{equation*}
-%     \hat B_n \propto n J_n(n \sech \alpha) \sim \sqrt{n} \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi  \tanh \alpha } }, \quad \text{for large } n
-% \end{equation*}
-
-% where $\sech\alpha = \hat A\cos 2\theta_{\mathrm{m}}$.
-
-$\Rightarrow$
-
-\begin{equation*}
-    \Gamma \propto \hat B_n \propto  \frac{ e^{ - n ( \alpha - \tanh \alpha )} }{\sqrt{2\pi n \tanh \alpha} } 
-\end{equation*}
-
-Small perturbation $\Rightarrow$ Small $\hat A$ $\Rightarrow$ Large $\alpha$ $\Rightarrow$ Drops fast at large $n$.
-
-
-\end{tcolorbox}
-}
-
-\end{frame}
-
 
 
 \begin{frame}{Single Frequency Matter Profile}
@@ -2501,6 +2550,49 @@ Resonance conditions
 \end{frame}
 
 
+
+\begin{frame}{Single Frequency Matter Potential Revisited}
+\setbeamercovered{invisible}
+
+Width 
+
+\begin{equation*}
+\alpha_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\theta_{\mathrm{m}} / k )
+\end{equation*}
+
+
+
+
+\begin{tcolorbox}
+
+\begin{equation*}
+    J_n(n \sech \beta) \sim \frac{ e^{ - n(\beta -\tanh\beta )} }{ \sqrt{ 2\pi n \tanh \beta } }, \quad \text{for large } n
+\end{equation*}
+
+
+$\Rightarrow$
+
+
+
+\begin{equation*}
+    \lvert \alpha_n \rvert \propto  \frac{ e^{ - n ( \beta - \tanh \beta )} }{\sqrt{2\pi n \tanh \beta} } , \quad \text{for large } n
+\end{equation*}
+
+where $\sech\beta = A\cos 2\theta_{\mathrm{m}}/\omega_{\mathrm m}$.
+
+
+\end{tcolorbox}
+
+
+% \pause
+
+\begin{tcolorbox}
+$\beta-\tanh\beta > 0$ $\Rightarrow$ {\bf Width} drops fast at large $n$.
+\end{tcolorbox}
+
+
+
+\end{frame}
 
 
 \begin{frame}{Two-frequency Matter Profile}
