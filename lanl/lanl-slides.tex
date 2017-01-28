@@ -704,11 +704,19 @@ Electron flavor survival probability
 P = \frac{1}{2} + s_3 
 \end{equation*}
 
-Oscillation frequency in matter: 
+Oscillation frequency in {\bf vacuum}: 
+
+\begin{equation*}
+    \omega_{\mathrm v} = \lvert \vec H_{\mathrm v} \rvert
+\end{equation*}
+
+
+Oscillation frequency in {\bf matter}: 
 
 \begin{equation*}
     \omega_{\mathrm m} = \lvert \vec H \rvert
 \end{equation*}
+
 
 
 \end{column}
@@ -800,6 +808,9 @@ Maximum possible flavor transition probability amplitude
 MSW Resonance    
 \item
 A specific matter density
+\begin{equation*}
+    \sqrt{2}G_{\mathrm F}n_{\mathrm e} \equiv \omega_{\mathrm v}\cos 2\theta_{\mathrm v} 
+\end{equation*}
 \end{itemize}
 
 
@@ -1680,6 +1691,7 @@ But the critical value for each mode becomes larger for large $n$'s
 \begin{equation*}
     \alpha_{n,\mathrm C}\equiv\sqrt{ 2 \lvert \alpha_1 (n k - \omega_{\mathrm m}) \rvert }
 \end{equation*}
+
 \end{tcolorbox}
 
 
@@ -1697,7 +1709,7 @@ But the critical value for each mode becomes larger for large $n$'s
 \begin{figure}
 \centering
 \includegraphics[width=0.95\textwidth]{assets/width-n}
-\caption*{Width of different modes}
+\caption*{Width of different modes given value of matter potential frequency $k$}
 \end{figure}
 
 }
@@ -1712,10 +1724,27 @@ Higher modes are less important
 
 
 
+\end{frame}
+
+
+
+\begin{frame}<presentation:0>[noframenumbering]{Single Frequency Matter Potential}
+
+Resonance conditions:
+
+\begin{equation*}
+    nk=\omega_{\mathrm m}
+\end{equation*}
+
+However, higher order resonances for n large usually have extremely small width.
+
 
 
 \end{frame}
 
+
+
+\subsection{Multiple Frequencies in Matter Potential}
 
 
 \begin{frame}{Multiple Frequencies in Matter Potential}
@@ -1758,10 +1787,9 @@ where
 
 
 
-%\subsection{Multifrequency Matter Potential}
 
-\begin{frame}<presentation:0>[noframenumbering]{Castle Wall Matter Potential}
 
+\begin{frame}{Castle Wall Matter Potential}
 
 
 
@@ -1773,17 +1801,33 @@ where
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{assets/castlewall-profile}
-    \caption{Castle wall matter profile}
+    \caption*{Castle wall matter profile: $\Lambda_2 =0.35\omega_{\mathrm v} \cos 2\theta_{\mathrm v} $,  $\Lambda_1 = 0.15\omega_{\mathrm v} \cos 2\theta_{\mathrm v}$ and period $X =2\pi/\omega_{\mathrm m}$ }
 \end{figure}
 
 \end{column}%
 \begin{column}{0.5\textwidth}
 
+\only<1>{
+\small
+\begin{equation*}
+    \lambda(x)= \lambda_0 + \sum_1^\infty \lambda_n \cos (k_n x)
+\end{equation*}
+
+where
+
+\begin{align*}
+    \lambda_0 = & (\Lambda_1+\Lambda_2)/2 \\
+    \lambda_n = & 2(-1)^n(\Lambda_1-\Lambda_2)/(2n\pi-\pi) \\
+    k_n =& 2\pi (2n-1)/X
+\end{align*}
+}
+
+\only<2>{
 \begin{figure}
         \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
-    % \caption{Transition probabilities}
+     \caption*{Transition probability is a Rabi resonance with small variations due to higher orders.}
 \end{figure}
-
+}
 
 \end{column}
 \end{columns}
