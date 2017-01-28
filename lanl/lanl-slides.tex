@@ -172,7 +172,7 @@
 }
 \institute{Department of Physics\\
 UNM}
-% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+%\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
 \begin{document}
 
@@ -1636,9 +1636,10 @@ D' =  \left\vert \frac{\alpha_2^2}{2 \alpha_n(\omega_{\mathrm m}-n k)} \right\ve
 \hline\hline
 $n$ & $D'$ \\
 \hline
--1 & $4.8\times 10^{-6}$ \\
-2 & $2.1\times 10^{-14}$ \\
--2 & $6.9\times 10^{-15}$
+1 & $0$ \\
+1 \& -1 & $4.8\times 10^{-6}$ \\
+1 \& 2 & $2.1\times 10^{-14}$ \\
+1 \& -2 & $6.9\times 10^{-15}$
 \end{tabular}
 %\caption{Triathlon results}
 \end{table}
@@ -1796,13 +1797,30 @@ where
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
-
+\only<1,2>{
 
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{assets/castlewall-profile}
     \caption*{Castle wall matter profile: $\Lambda_2 =0.35\omega_{\mathrm v} \cos 2\theta_{\mathrm v} $,  $\Lambda_1 = 0.15\omega_{\mathrm v} \cos 2\theta_{\mathrm v}$ and period $X =2\pi/\omega_{\mathrm m}$ }
 \end{figure}
+
+}
+
+\only<3>{
+\begin{table}
+\caption*{Relative detuning of each frequency.} 
+\begin{tabular}{lll} 
+ $\{n_1,n_2\}$  & $D'_{\{n_1,n_2\}}$   \\
+\hline \\
+ $\{1,0\}$ & $0$  \\ 
+ $\{1,0\}$ \& $\{-1,0\}$ &  $1.0\times 10^{-2}$ \\ 
+ $\{1,0\}$ \& $\{0,1\}$ &   $1.1\times 10^{-3}$  \\
+ $\{1,0\}$ \& $\{2,0\}$ &  $2.0\times 10^{-4}$
+\end{tabular} 
+\end{table}
+
+}
 
 \end{column}%
 \begin{column}{0.5\textwidth}
@@ -1822,7 +1840,7 @@ where
 \end{align*}
 }
 
-\only<2>{
+\only<2,3>{
 \begin{figure}
         \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
      \caption*{Transition probability is a Rabi resonance with small variations due to higher orders.}
