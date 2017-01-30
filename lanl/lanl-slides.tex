@@ -11,6 +11,8 @@
 \renewcommand\sfdefault{cmbr}
 
 
+\usepackage{cancel}
+
 
 %\usepackage{booktabs}
 %\usepackage[scale=2]{ccicons}
@@ -166,7 +168,8 @@
 
 \title{Stimulated Neutrino Flavor Conversions and Rabi Oscillations}
 %\subtitle{PhD Candidacy Exam}
-\date{\today}
+\date{\small January 31, 2017}
+%\today}
 \author{Lei Ma\\
 %{\bf{Supervisor}}: Huaiyu Duan
 in collaboration with \\
@@ -191,8 +194,18 @@ UNM}
 \begin{frame} 
 \titlepage 
 
-\begin{textblock*}{80pt}(165pt,230pt)
-@LANL
+\begin{textblock*}{100pt}(130pt,230pt)
+\centering
+\small DOE EPSCoR grant\\ \#DE-SC0008142
+\end{textblock*}
+
+
+\begin{textblock*}{100pt}(260pt,210pt)
+\includegraphics[height=1.5cm]{Los_Alamos_logo.png}
+\end{textblock*}
+
+\begin{textblock*}{100pt}(10pt,210pt)
+\includegraphics[height=1.5cm]{University_of_New_Mexico_Seal.png}
 \end{textblock*}
 
 \end{frame} 
@@ -242,7 +255,7 @@ UNM}
     \item fermions,
     \item electrically neutral,
     \item three flavors,
-    \item light.
+    \item none vanishing mass.
     \end{itemize}
 
 
@@ -920,16 +933,21 @@ Astrophysical environments: supernovae etc
 
 
 \begin{equation*}
-    \lambda(x) = \lambda_0 + A \cos(k x )
+    \lambda(x) = \lambda_0\only<2>{ + A \cos(k x )}
 \end{equation*}
 
 
 
+\only<1>{
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon-0.png}
+\end{figure}
+}
 
 
 
 
-
+\only<2>{
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
@@ -937,12 +955,19 @@ Astrophysical environments: supernovae etc
 %with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$
 %}
 \end{figure}
+}
 
 
+\only<1>{
+\centering
+Transition probabilities between mass states in matter.
+}
+
+\only<2>{
 {\small
 P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (2014);
 }
-
+}
 
 
 \end{frame}
@@ -1217,13 +1242,13 @@ Background matter basis:
 
 \begin{frame}{Hamiltonian in Matter Basis}
 
-\begin{textblock*}{10pt}(240pt,1pt)
-\small
-\begin{equation*}
-\alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
-\end{equation*}
+% \begin{textblock*}{10pt}(240pt,1pt)
+% \small
+% \begin{equation*}
+% \alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
+% \end{equation*}
 
-\end{textblock*}
+% \end{textblock*}
 
 
 Matter potential frequency
@@ -1234,8 +1259,12 @@ Matter potential frequency
 
 
 \begin{align*}
-    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
-    \to &  \omega_{\mathrm m}\begin{pmatrix}
+    \mathbf {H} =\,& \frac{1}{2}\left( - \omega_{\mathrm{m}} 
+    +\cancel{
+     \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} } \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} 
+    }  
+    }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
+    \to\, &  \omega_{\mathrm m}\begin{pmatrix}
     0\\
     0\\
     1
@@ -1243,13 +1272,24 @@ Matter potential frequency
     \cos (kx)\\
     -\sin(k x)\\
     0
-    \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
+    \end{pmatrix}  + \only<1>{\alpha \begin{pmatrix}
     \cos (-kx)\\
     -\sin( - k x)\\
     0
-    \end{pmatrix} $}
+    \end{pmatrix} 
+    }
+    \only<2>{\cancel{\alpha \begin{pmatrix}
+    \cos (-kx)\\
+    -\sin( - k x)\\
+    0
+    \end{pmatrix}
+    }
+    }
 \end{align*}
 
+\begin{equation*}
+\alpha = \frac{\sin2\theta_{\mathrm m}}{2}A
+\end{equation*}
 
 
 
@@ -1264,29 +1304,30 @@ Matter potential frequency
 \begin{frame}{Rabi Formula Works}
 
 
-\begin{textblock*}{10pt}(230pt,-1pt)
-{\tiny
-\begin{equation*}
-\vec H \sim  \omega_{\mathrm m}\begin{pmatrix}
-    0\\
-    0\\
-    1
-    \end{pmatrix} + \alpha \begin{pmatrix}
-    \cos (kx)\\
-    -\sin(k x)\\
-    0
-    \end{pmatrix} 
-\end{equation*}
-}
-\end{textblock*}
+% \begin{textblock*}{10pt}(230pt,-1pt)
+% {\tiny
+% \begin{equation*}
+% \vec H \sim  \omega_{\mathrm m}\begin{pmatrix}
+%     0\\
+%     0\\
+%     1
+%     \end{pmatrix} + \alpha \begin{pmatrix}
+%     \cos (kx)\\
+%     -\sin(k x)\\
+%     0
+%     \end{pmatrix} 
+% \end{equation*}
+% }
+% \end{textblock*}
 
 
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency}
 %stimulated-neutrino-oscillations-kneller.png}
 \caption*{
+Transition between two mass states in background matter potential $\lambda_0$\\
 Lines: Rabi formula\\
-Dots, diamonds, triangles, and squares are {\bf full solutions without approximations} for $k=\omega_{\mathrm m}$, $k=(1-2\times 10^{-5})\omega_{\mathrm m}$, and $k=(1-10^{-4})\omega_{\mathrm m}$ respectively.
+Dots, diamonds, triangles, and squares are {\bf full solutions without approximations} for {\color{black}$k=\omega_{\mathrm m}$}, {\color{blue}$k=(1-2\times 10^{-5})\omega_{\mathrm m}$}, and {\color{red}$k=(1-10^{-4})\omega_{\mathrm m}$} respectively.
 }
 \end{figure}
 
@@ -1307,8 +1348,12 @@ We have been making approximations.
 
 
 \begin{align*}
-     \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!20}{$+  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
-    \to &  \omega_{\mathrm m}\begin{pmatrix}
+    \mathbf {H} =\,& \frac{1}{2}\left( - \omega_{\mathrm{m}} 
+    +\cancel{
+     \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} } \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} 
+    }  
+    }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
+    \to\, &  \omega_{\mathrm m}\begin{pmatrix}
     0\\
     0\\
     1
@@ -1316,11 +1361,12 @@ We have been making approximations.
     \cos (kx)\\
     -\sin(k x)\\
     0
-    \end{pmatrix}  \colorbox{gray!20}{$+ \alpha \begin{pmatrix}
+    \end{pmatrix}  + \cancel{\alpha \begin{pmatrix}
     \cos (-kx)\\
     -\sin( - k x)\\
     0
-    \end{pmatrix} $}
+    \end{pmatrix}
+    }
 \end{align*}
 
 
@@ -1424,7 +1470,13 @@ where $\alpha_n =  - (-i)^n  n  k \tan 2\theta_{\mathrm{m}}  J_n ( A \cos 2\thet
 
 \begin{tcolorbox}
 \centering
-Multiple potentials with different frequencies!
+Map neutrino oscillations in single frequency matter potential to Rabi oscillations with many driving potentials.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}
+\centering
+Resonance condition for each mode: $nk=\omega_{\mathrm m}$
 \end{tcolorbox}
 
 
@@ -1433,12 +1485,15 @@ Multiple potentials with different frequencies!
 \end{frame}
 
 
-\subsection{Rabi Oscillations With Multiple Potentials}
+\subsection{Rabi Oscillations With Multiple Driving Frequencies}
 
 
-\begin{frame}{Rabi Oscillations With Multiple Potentials}
+\begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
+
 
 \only<1>{
+Consider Rabi oscillation with two driving frequencies $k_1=n_1 k$, $k_2=n_2 k$
+
 \begin{equation*}
     \vec H = \begin{pmatrix}
     0\\
@@ -1511,9 +1566,42 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 \end{frame}
 
 
+\begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
+
+\begin{textblock*}{100pt}(240pt,18pt)
+\textblockcolour{white}
+\tiny
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+\end{textblock*}
 
 
-\begin{frame}{Rabi Oscillations With Multiple Potentials}
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
+\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
+}
+\end{figure}
+
+% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
+
+{\tiny
+\vspace{-15pt}
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
+    \hline
+       Dashed  &  dotted & dash-dotted & solid \\
+       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
+    \end{tabular}
+\end{center}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
 
 
 
@@ -1551,37 +1639,6 @@ For $k_1 = \omega_{\mathrm m}$, survival of resonance requires
 \end{frame}
 
 
-\begin{frame}{Rabi Oscillations With Multiple Potentials}
-
-\begin{textblock*}{100pt}(240pt,18pt)
-\textblockcolour{white}
-\tiny
-\begin{equation*}
-D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
-\end{equation*}
-\end{textblock*}
-
-
-\begin{figure}
-\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
-\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$ 
-}
-\end{figure}
-
-% Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
-
-{\tiny
-\begin{center}
-    \begin{tabular}{c|c|c|c}
-    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
-    \hline
-       Dashed  &  dotted & dash-dotted & solid \\
-       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
-    \end{tabular}
-\end{center}
-}
-
-\end{frame}
 
 
 
@@ -1608,16 +1665,16 @@ Matter potential
 
 Consider the resonance condition ($k=\omega_{\mathrm m}$) 
 
-\only<1>{
-\begin{equation*}
-\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
-0 & \frac{1}{2}  \alpha_n e^{i  {\color{red} (n k) } x}\\
-\frac{1}{2}  \alpha_n^* e^{ -i  {\color{red} (n k) } x} & 0
-\end{pmatrix}
-\end{equation*}
-}
+% \only<1>{
+% \begin{equation*}
+% \mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+% 0 & \frac{1}{2}  \alpha_n e^{i  {\color{red} (n k) } x}\\
+% \frac{1}{2}  \alpha_n^* e^{ -i  {\color{red} (n k) } x} & 0
+% \end{pmatrix}
+% \end{equation*}
+% }
 
-\only<2>{
+
 
 
 \begin{equation*}
@@ -1629,7 +1686,7 @@ Consider the resonance condition ($k=\omega_{\mathrm m}$)
   \alpha_{n}^* e^{ -i   n k  x} & 0
 \end{pmatrix}
 \end{equation*}
-}
+
 
 \pause
 
@@ -1822,20 +1879,20 @@ where
 
 }
 
-\only<3>{
-\begin{table}
-\caption*{Relative detuning of each frequency.} 
-\begin{tabular}{lll} 
- $\{n_1,n_2\}$  & $D'_{\{n_1,n_2\}}$   \\
-\hline \\
- $\{1,0\}$ & $0$  \\ 
- $\{1,0\}$ \& $\{-1,0\}$ &  $1.0\times 10^{-2}$ \\ 
- $\{1,0\}$ \& $\{0,1\}$ &   $1.1\times 10^{-3}$  \\
- $\{1,0\}$ \& $\{2,0\}$ &  $2.0\times 10^{-4}$
-\end{tabular} 
-\end{table}
+% \only<3>{
+% \begin{table}
+% \caption*{Relative detuning of each frequency.} 
+% \begin{tabular}{lll} 
+%  $\{n_1,n_2\}$  & $D'_{\{n_1,n_2\}}$   \\
+% \hline \\
+%  $\{1,0\}$ & $0$  \\ 
+%  $\{1,0\}$ \& $\{-1,0\}$ &  $1.0\times 10^{-2}$ \\ 
+%  $\{1,0\}$ \& $\{0,1\}$ &   $1.1\times 10^{-3}$  \\
+%  $\{1,0\}$ \& $\{2,0\}$ &  $2.0\times 10^{-4}$
+% \end{tabular} 
+% \end{table}
 
-}
+% }
 
 \end{column}%
 \begin{column}{0.5\textwidth}
@@ -1855,7 +1912,7 @@ where
 \end{align*}
 }
 
-\only<2,3>{
+\only<2>{
 \begin{figure}
         \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
      \caption*{Transition probability is a Rabi resonance with small variations due to higher orders.}
@@ -1893,7 +1950,7 @@ MSW resonance: matter potential cancels out the vacuum diagonal elements of the 
 Stimulated oscillations: variation in matter profile can cause resonances.
 
 \item
-Oscillations with two driving fields of different frequencies: large potential to destroy the resonance.
+In many cases neutrino oscillations in multi-frequency matter potential can be viewed as Rabi oscillations with few driving frequencies.
 \end{enumerate}
 
 \end{column}
@@ -1931,9 +1988,9 @@ Resonance condition
 \only<4>{
 
 
-\begin{equation*}
-\lvert \alpha_2\rvert \gg \alpha_{2,\mathrm C} \equiv \sqrt{ 2 \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }   
-\end{equation*}
+% \begin{equation*}
+% \lvert \alpha_2\rvert \gg \alpha_{2,\mathrm C} \equiv \sqrt{ 2 \lvert \alpha_1 (k_2 - \omega_{\mathrm m}) \rvert }   
+% \end{equation*}
 
 
 }
