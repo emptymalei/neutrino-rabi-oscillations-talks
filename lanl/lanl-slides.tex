@@ -38,7 +38,7 @@
 ]{textpos}
 
 %%%%% eso-pic package that set up a grid system for the slides BEGIN
-% \usepackage[texcoord,grid,gridcolor=red!10,subgridcolor=green!10,gridunit=pt]{eso-pic}
+\usepackage[texcoord,grid,gridcolor=red!10,subgridcolor=green!10,gridunit=pt]{eso-pic}
 % grid,gridcolor=red!20,subgridcolor=green!20,gridunit=pt
 %%%%% eso-pic package that set up a grid system for the slides END
 
@@ -176,14 +176,26 @@ Shashank Shalgar, and Huaiyu Duan
 UNM}
 %\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
+
 \begin{document}
 
   {%
     \setbeamertemplate{headline}{}
-    \frame{\titlepage}
+    % \frame{\titlepage}
   }
 
 %\maketitle % The reason why two title pages
+
+
+
+\begin{frame} 
+\titlepage 
+
+\begin{textblock*}{80pt}(165pt,230pt)
+@LANL
+\end{textblock*}
+
+\end{frame} 
 
 \begin{frame}{Outline}
   \setbeamertemplate{section in toc}[sections numbered]
